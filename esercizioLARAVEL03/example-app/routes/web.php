@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $title = 'HOME PAGE';
+    return view('home', ['title' => $title]);
 });
 
 Route::get('/articles', function () {
@@ -22,5 +23,6 @@ Route::get('/articles', function () {
 });
 
 Route::get('/aboutMe', function () {
-    return view('aboutMe');
+    $description = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur qui vitae illo quia nulla amet vel veritatis nostrum dolore. Ipsa dicta consequuntur molestiae perspiciatis illo amet libero tempora esse veritatis.';
+    return view('aboutMe', ['description' => $description]);
 });

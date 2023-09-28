@@ -15,7 +15,7 @@
         </ul>
 
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur qui vitae illo quia nulla amet vel veritatis nostrum dolore. Ipsa dicta consequuntur molestiae perspiciatis illo amet libero tempora esse veritatis.
+            {{$description}}
         </p>
         
     </body>

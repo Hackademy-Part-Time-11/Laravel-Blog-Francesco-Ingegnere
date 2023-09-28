@@ -6,7 +6,7 @@
         <title>Home Page</title>
     </head>
     <body>
-        <h1>LA HOME</h1>
+        <h1>LA {{$title}}</h1>
 
         <ul>
             <li><a href="/">HomePage</a></li>
