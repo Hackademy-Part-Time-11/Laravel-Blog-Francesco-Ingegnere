@@ -9,9 +9,9 @@
         <h1>LA {{$title}}</h1>
 
         <ul>
-            <li><a href="/">HomePage</a></li>
-            <li><a href="articles">Articoli</a></li>
-            <li><a href="aboutMe">Chi Sono</a></li>
+            <li><a href="{{route('home')}}">HomePage</a></li>
+            <li><a href="{{route('articles')}}">Articoli</a></li>
+            <li><a href="{{route('aboutMe')}}">Chi Sono</a></li>
         </ul>
         
     </body>
