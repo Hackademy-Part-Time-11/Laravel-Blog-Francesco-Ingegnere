@@ -5,7 +5,7 @@
     <div class="card-body">
         <h5 class="card-title">{{$title}}</h5>
         <p class="card-text">{{$description}}</p>
-        <a href="{{route('article', $articleId)}}" class="btn btn-primary">Continua ...</a>
+        <a href="{{$route}}" class="btn btn-primary">Continua ...</a>
     </div>
     <div class="card-footer text-body-secondary">
         2 days ago
