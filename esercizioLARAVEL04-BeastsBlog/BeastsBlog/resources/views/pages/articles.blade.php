@@ -20,19 +20,12 @@
 
                     @foreach ($articles as $article)
                         <div class="col-4 g-3 px-2">
-                            <div class="card text-center">
-                                <div class="card-header">
-                                    {{$article['category']}}
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">{{$article['title']}}</h5>
-                                    <p class="card-text">{{$article['description']}}</p>
-                                    <a href="{{route('article', $article['id'])}}" class="btn btn-primary">Continua ...</a>
-                                </div>
-                                <div class="card-footer text-body-secondary">
-                                    2 days ago
-                                </div>
-                            </div>
+                            <x-article-card 
+                                :title="$article['title']" 
+                                :category="$article['category']" 
+                                :description="$article['description']" 
+                                :article-id="$article['id']"
+                            />
                         </div>
                     @endforeach
                 
