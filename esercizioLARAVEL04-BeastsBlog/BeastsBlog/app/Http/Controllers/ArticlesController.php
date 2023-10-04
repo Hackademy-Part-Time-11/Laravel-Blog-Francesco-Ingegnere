@@ -26,14 +26,13 @@ class ArticlesController extends Controller
     }
 
     public function showArticle($id) {
-        $articles = $this->articles;
-        foreach($articles as $article){
+        foreach($this->articles as $article) {
             if($article['id'] == $id){
-                return view('pages.article', ['articles' => $articles[$id-1]]);
-            }
-            else{
-                return view('pages.articleNull');
+                return view('pages.article', ['articles' => $this->articles[$id-1]]);
             }
         }
+        
+        return view('pages.articleNull');
+        
     }
 }
