@@ -1,4 +1,5 @@
 <x-layout-main>
+    
     <x-slot:title>Articolo Assente</x-slot>
 
     <div class="container-fluid">

@@ -1,4 +1,5 @@
 <x-layout-main>
+    
     <x-slot:title>Articoli</x-slot>
 
     <div class="container">
