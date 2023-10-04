@@ -1,8 +1,7 @@
 <x-layout-main>
-    
+
     <x-slot:title>Articoli</x-slot>
 
-    <div class="container">
         <h1>Articoli</h1>
     
         <div class="row">
@@ -28,7 +27,6 @@
             
             
         </div>
-    
-    </div>
+        
 </x-layout-main>
         
