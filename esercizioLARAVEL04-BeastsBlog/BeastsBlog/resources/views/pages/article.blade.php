@@ -26,6 +26,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('aboutMe')}}">Chi Siamo</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('contacts')}}">Contatti</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +45,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$articles['title']}}</h5>
                         <p class="card-text">{{$articles['description']}}</p>
-                        <a href="/articoli/{{$articles['id']}}" class="btn btn-primary">Continua ...</a>
+                        <a href="{{route('article', $articles['id'])}}" class="btn btn-primary">Continua ...</a>
                     </div>
                     <div class="card-footer text-body-secondary">
                         2 days ago

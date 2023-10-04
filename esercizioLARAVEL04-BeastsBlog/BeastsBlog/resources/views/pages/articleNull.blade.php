@@ -36,8 +36,7 @@
 
 
         <div class="container-fluid">
-            <h1>{{$title}}</h1>
-            <h2>{{config('app.name')}}</h2>
+            <h1>l'articolo non esiste</h1>
         </div>
 
 
