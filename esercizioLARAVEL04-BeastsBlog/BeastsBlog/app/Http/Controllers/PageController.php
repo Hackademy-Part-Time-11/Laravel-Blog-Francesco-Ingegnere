@@ -19,4 +19,8 @@ class PageController extends Controller
     public function showContacts() {
         return view('pages.contacts');
     }
+
+    public function showAccount() {
+        return view('account');
+    }
 }

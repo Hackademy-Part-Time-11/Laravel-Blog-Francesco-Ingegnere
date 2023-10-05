@@ -20,6 +20,11 @@
                     <a class="nav-link" href="{{route('contacts')}}">Contatti</a>
                 </li>
             </ul>
+            <ul class="navbar-nav ms-auto">
+                <li>
+                    <a class="btn btn-dark" href="{{route('account')}}">Login</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

@@ -23,3 +23,5 @@ Route::get('/articoli/{id}', [App\Http\Controllers\ArticlesController::class, 's
 Route::get('/chi-siamo', [App\Http\Controllers\PageController::class, 'showAboutMe'])->name('aboutMe');
 
 Route::get('/contatti', [App\Http\Controllers\PageController::class, 'showContacts'])->name('contacts');
+
+Route::get('/account', [App\Http\Controllers\PageController::class, 'showAccount'])->name('account');
