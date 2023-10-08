@@ -22,6 +22,8 @@ Route::get('/articoli/{id}', [App\Http\Controllers\ArticlesController::class, 's
 
 Route::get('/chi-siamo', [App\Http\Controllers\PageController::class, 'showAboutMe'])->name('aboutMe');
 
-Route::get('/contatti', [App\Http\Controllers\PageController::class, 'showContacts'])->name('contacts');
+Route::get('/contatti', [App\Http\Controllers\ContactController::class, 'showForm'])->name('contacts');
+
+Route::post('/contatti/invia', [App\Http\Controllers\ContactController::class, 'send'])->name('contacts.send');
 
 Route::get('/account', [App\Http\Controllers\PageController::class, 'showAccount'])->name('account');

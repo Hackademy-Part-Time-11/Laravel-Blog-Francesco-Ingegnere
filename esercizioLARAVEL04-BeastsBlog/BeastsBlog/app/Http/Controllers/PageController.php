@@ -16,10 +16,6 @@ class PageController extends Controller
         return view('pages.aboutMe', compact('description'));
     }
 
-    public function showContacts() {
-        return view('pages.contacts');
-    }
-
     public function showAccount() {
         return view('account');
     }
