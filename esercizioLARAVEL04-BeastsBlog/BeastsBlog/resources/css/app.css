@@ -1,5 +1,58 @@
 @import "bootstrap";
 
-h1{
-    color: red !important;
+
+
+button{
+    background-color: black !important;
+    color: white !important;
+}
+
+    button:hover{
+        background-color: white !important;
+        color: black !important;
+    }
+
+
+/* navBar */
+
+
+nav.bg-body-tertiary{
+    background-color: #ffb600 !important;
+}
+
+    ul.hovereggianti2 li a{
+        color: black !important;
+    }
+
+    ul.hovereggianti2>li>a:hover{
+        color: white !important;
+    } 
+nav ul li:last-of-type a{
+    background-color: black;
+    color: white !important;
+    border-radius: 5px;
+}
+    nav ul li:last-of-type a:hover{
+        background-color: white;
+        color: black !important;
+        border-radius: 5px;
+    }
+
+/* footer */
+
+footer h6, footer div.bg-black i{
+    color: #ffb600;
+}
+
+footer div.bg-black p{
+    color: white;
+}
+
+footer a, footer p, footer i{
+    text-decoration: none;
+    color: black;
+}
+
+footer i:hover{
+    color: #ffb600 !important;
 }
