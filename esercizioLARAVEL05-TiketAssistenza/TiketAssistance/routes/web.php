@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/tickets', [App\Http\Controllers\TicketController::class, 'index'])->name('tickets');
+
+Route::get('/tickets/{id}', [App\Http\Controllers\TicketController::class, 'show'])->name('tickets.show');
+
+Route::post('/tickets/send-mail', [App\Http\Controllers\TicketController::class, 'sendMail'])->name('tickets.send-mail');

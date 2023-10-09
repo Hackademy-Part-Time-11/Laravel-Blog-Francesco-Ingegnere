@@ -4,7 +4,7 @@
         <h1>{{$title}}</h1>
 
         <div class="mt-4">
-            @foreach ($tickets as $ticket)
+            @foreach ($tickets as $ticketId => $ticket)
 
             <div class="mb-3">
 
@@ -13,6 +13,7 @@
                     :email="$ticket['user_email']"
                     :status="$ticket['status']"
                     :created-at="$ticket['created_at']"
+                    :route="route('tickets.show', $ticketId)"
                     />
 
             </div>
