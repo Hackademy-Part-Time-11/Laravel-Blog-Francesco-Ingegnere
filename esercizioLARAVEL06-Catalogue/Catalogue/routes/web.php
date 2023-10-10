@@ -14,3 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\PageController::class, 'showHome'])->name('index');
+
+Route::get('/catalogo', [App\Http\Controllers\PageController::class, 'showCatalogue'])->name('catalogue');
+
+Route::get('/catalogo/{id}', [App\Http\Controllers\PageController::class, 'showArticle'])->name('catalogue.article');
