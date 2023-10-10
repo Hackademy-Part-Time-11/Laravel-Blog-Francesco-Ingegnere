@@ -9,7 +9,7 @@
             @if ($articles)
     
                 @foreach ($articles as $article)
-                    <div class="col-4 g-3 px-2">
+                    <div class="col-lg-4 col-md-6 col-12 g-3 px-2">
                         <x-article-card 
                             :title="$article['title']" 
                             :category="$article['category']" 
