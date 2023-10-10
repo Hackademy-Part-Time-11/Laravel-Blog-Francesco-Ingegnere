@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                {{$article['price']}}
+                €. {{$article['price']}},00
             </div>
         </div>
 
