@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Info;
 
 class PageController extends Controller
 {
@@ -35,5 +37,17 @@ class PageController extends Controller
 
     public function showArticle($id) {
         return view('article', ['article' => $this->articles[$id], 'articleId' => $id]);
+    }
+
+    public function sendMail(Request $request) {
+        $user = $this->articles[$request->article_id];
+
+        Mail::to('admin@example.it')->send(new Info(
+            $request->name,
+            $request->email,
+            $request->message,
+        ));
+
+        return redirect()->back()->with(['success' => 'richiesta inviata con successo']);
     }
 }

@@ -18,3 +18,5 @@ Route::get('/', [App\Http\Controllers\PageController::class, 'showHome'])->name(
 Route::get('/catalogo', [App\Http\Controllers\PageController::class, 'showCatalogue'])->name('catalogue');
 
 Route::get('/catalogo/{id}', [App\Http\Controllers\PageController::class, 'showArticle'])->name('catalogue.article');
+
+Route::post('/article/send-mail', [App\Http\Controllers\PageController::class, 'sendMail'])->name('article.send-mail');

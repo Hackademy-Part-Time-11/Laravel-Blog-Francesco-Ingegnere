@@ -23,9 +23,9 @@
             </div>
         </div>
 
-{{--         <x-success /> --}}
+        <x-success />
         
-        <form action="" method="POST" class="mt-5">
+        <form action="{{route('article.send-mail')}}" method="POST" class="mt-5">
             @csrf
 
             <h4>Richiedi informazioni su questo prodotto</h4>
@@ -34,9 +34,9 @@
 
             <div class="d-flex flex-column mt-5">
                 <label for="name" class="my-2">Nome</label>
-                <input type="text" name="name" id="name" rows="6" class="from-control">
+                <input type="text" name="name" id="name" class="from-control">
                 <label for="email" class="my-2">Email</label>
-                <input type="email" name="email" id="email" rows="6" class="from-control">
+                <input type="email" name="email" id="email" class="from-control">
                 <label for="message" class="my-2">Richiedi informazioni</label>
                 <textarea name="message" id="message" rows="6" class="from-control"></textarea>
             </div>
