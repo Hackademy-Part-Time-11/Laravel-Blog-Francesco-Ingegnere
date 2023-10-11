@@ -12,6 +12,9 @@
         <div class="collapse navbar-collapse justify-content-end text-end" id="navbarNavDropdown">
             <ul class="navbar-nav hovereggianti2">
                 <li class="nav-item p-2">
+                    <a class="nav-link active" aria-current="page" href="{{route('anime.genres')}}">Catalogo ANIME</a>
+                </li>
+                <li class="nav-item p-2">
                     <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
                 <li class="nav-item p-2">
