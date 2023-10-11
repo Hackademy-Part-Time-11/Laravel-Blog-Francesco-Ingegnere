@@ -7,7 +7,7 @@
     <ul class="row">
 
         @foreach ($data as $anime)
-            <li class="col-lg-6 col-4 list-unstyled flex-wrap"><a href="{{route('anime.anime', $anime['mal_id'])}}" class="text-dark text-decoration-none btn btn-secondary py-1 my-1 fs-5">{{$anime['title']}}</a></li>
+            <li class="col-lg-6 col-4 list-unstyled flex-wrap"><a href="{{route('anime.anime', ['id' => $anime['mal_id'], 'category_id' => $category_id])}}" class="text-dark text-decoration-none btn btn-secondary py-1 my-1 fs-5">{{$anime['title']}}</a></li>
         @endforeach
 
     </ul>

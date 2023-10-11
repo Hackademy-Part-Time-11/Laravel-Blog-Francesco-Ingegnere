@@ -32,16 +32,16 @@ class AnimeController extends Controller
             ];
         });
 
-        return view('anime.genre', compact('data'));
+        return view('anime.genre', compact('data'), ['category_id' => $id]);
     }
 
-    public function anime ($id) {
+    public function anime ($id, $category_id = null) {
         $endpoint = self::URL.'anime/'.$id;
 
         $responseJSON = Http::withOptions(['verify' => false])->get($endpoint)->json();
 
         $data = $responseJSON['data'];
 
-        return view('anime.anime', ['anime' => $data]);
+        return view('anime.anime', ['anime' => $data, 'category_id' => $category_id]);
     }
 }

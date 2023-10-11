@@ -22,7 +22,11 @@
         </div>
     </div>
 
-    <button class="btn btn-primary mt-3"><a href="{{route('anime.genres')}}" class="text-decoration-none p-auto">indietro</a></button>
+    @if ($category_id)
+        <button class="btn btn-primary mt-3"><a href="{{route('anime.genre', $category_id)}}" class="text-decoration-none p-auto">indietro</a></button>
+    @else
+        <button class="btn btn-primary mt-3"><a href="{{route('anime.genres')}}" class="text-decoration-none p-auto">indietro ai generi</a></button>
+    @endif
 
 
     {{-- <button class="btn btn-primary"><a href="{{route('anime.genre', $data['mal_id'])}}" class="text-decoration-none p-auto">indietro</a></button> --}}

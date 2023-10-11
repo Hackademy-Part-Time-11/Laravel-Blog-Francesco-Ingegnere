@@ -34,7 +34,4 @@ Route::get('/anime/generi', [App\Http\Controllers\AnimeController::class, 'genre
 
 Route::get('/anime/generi/{id}', [App\Http\Controllers\AnimeController::class, 'genre'])->name('anime.genre');
 
-Route::get('/anime/view/{id}', [App\Http\Controllers\AnimeController::class, 'anime'])->name('anime.anime');
-
-/* https://api.jikan.moe/v4/genres/anime */
-/* https://api.jikan.moe/v4/anime?genres= */
+Route::get('/anime/view/{id}/{category_id?}', [App\Http\Controllers\AnimeController::class, 'anime'])->name('anime.anime');
