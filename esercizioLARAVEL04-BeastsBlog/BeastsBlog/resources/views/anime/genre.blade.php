@@ -12,7 +12,7 @@
 
     </ul>
 
-    <button class="btn btn-primary"><a href="{{route('anime.genres')}}" class="text-decoration-none p-auto">indietro</a></button>
+    <a href="{{route('anime.genres')}}" class="text-decoration-none p-auto btn btn-dark">indietro</a>
 
 
 </x-layout-main>

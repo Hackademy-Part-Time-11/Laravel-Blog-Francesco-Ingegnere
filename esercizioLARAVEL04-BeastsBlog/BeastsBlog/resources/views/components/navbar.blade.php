@@ -1,7 +1,8 @@
 {{-- navbar --}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary py-4">
     <div class="container">
-        <a class="navbar-brand" href="{{route('home')}}">
+        <a class="navbar-brand font-weight-bold" href="{{route('home')}}">
+            <img src="/logoipsum-277.svg" alt="logo">
             BEASTS BLOG
         </a>
     
