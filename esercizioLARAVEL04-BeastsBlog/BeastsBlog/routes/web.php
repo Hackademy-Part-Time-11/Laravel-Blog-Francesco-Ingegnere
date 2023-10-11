@@ -27,3 +27,14 @@ Route::get('/contatti', [App\Http\Controllers\ContactController::class, 'showFor
 Route::post('/contatti/invia', [App\Http\Controllers\ContactController::class, 'send'])->name('contacts.send');
 
 Route::get('/account', [App\Http\Controllers\PageController::class, 'showAccount'])->name('account');
+
+
+
+Route::get('/anime/generi', [App\Http\Controllers\AnimeController::class, 'genres'])->name('anime.genres');
+
+Route::get('/anime/generi/{id}', [App\Http\Controllers\AnimeController::class, 'genre'])->name('anime.genre');
+
+Route::get('/anime/view/{id}', [App\Http\Controllers\AnimeController::class, 'anime'])->name('anime.anime');
+
+/* https://api.jikan.moe/v4/genres/anime */
+/* https://api.jikan.moe/v4/anime?genres= */
