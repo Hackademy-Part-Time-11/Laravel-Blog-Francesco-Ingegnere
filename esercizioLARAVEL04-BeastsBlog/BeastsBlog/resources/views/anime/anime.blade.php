@@ -1,6 +1,6 @@
 <x-layout-main>
 
-    <x-slot:title>Genere Anime</x-slot>
+    <x-slot:title>Anime</x-slot>
 
     
 

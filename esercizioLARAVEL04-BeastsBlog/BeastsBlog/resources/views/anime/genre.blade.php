@@ -1,13 +1,13 @@
 <x-layout-main>
 
-    <x-slot:title>Genere Anime</x-slot>
+    <x-slot:title>Elenco ANIME per genere {{$titleGenre}}</x-slot>
 
-    <h1>Elenco Anime</h1>
+    <h1 class="mb-5">Elenco Anime {{$titleGenre}}</h1>
 
     <ul class="row">
 
         @foreach ($data as $anime)
-            <div class="col-lg-4 col-md-6 col-12 flex-wrap mb-3">
+            <div class="col-xxl-3 col-lg-4 col-md-6 col-12 flex-wrap mb-3">
                 <div class="card" style="width: 18rem;">
                     <img src="{{$anime['image']}}" class="card-img-top" alt="...">
                     <div class="card-body">

@@ -11,7 +11,7 @@ class AnimeController extends Controller
     const URL = 'https://api.jikan.moe/v4/';
 
     public function genres () {
-        $response = Http::withOptions(['verify' => false])->get(self::URL.'genres/anime');
+        $response = Http::get(self::URL.'genres/anime');
 
         $json = $response->json();
 
@@ -21,7 +21,17 @@ class AnimeController extends Controller
     public function genre ($id) {
         $endpoint = self::URL.'anime';
 
-        $responseJSON = Http::withOptions(['verify' => false])->get($endpoint, ['genres' => $id])->json();
+        $responseGenres = Http::get(self::URL.'genres/anime')->json();
+
+        $titleGenre = '';
+
+        foreach($responseGenres['data'] as $genre){
+            if($genre['mal_id'] == $id){
+                $titleGenre = $genre['name'];
+            }
+        }
+
+        $responseJSON = Http::get($endpoint, ['genres' => $id])->json();
 
         $data = $responseJSON['data'];
 
@@ -34,13 +44,13 @@ class AnimeController extends Controller
             ];
         });
 
-        return view('anime.genre', compact('data'), ['category_id' => $id]);
+        return view('anime.genre', compact('data'), ['category_id' => $id, 'titleGenre' => $titleGenre]);
     }
 
     public function anime ($id, $category_id = null) {
         $endpoint = self::URL.'anime/'.$id;
 
-        $responseJSON = Http::withOptions(['verify' => false])->get($endpoint)->json();
+        $responseJSON = Http::get($endpoint)->json();
 
         $data = $responseJSON['data'];
 
