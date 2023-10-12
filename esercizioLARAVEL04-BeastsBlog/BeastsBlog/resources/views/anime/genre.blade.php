@@ -20,7 +20,7 @@
                         @endforeach
                         <br>
     
-                        <a href="{{route('anime.anime', ['id' => $anime['mal_id'], 'category_id' => $category_id])}}" class="btn btn-dark mt-2">Continua ...</a>
+                        <a href="{{route('anime.anime', ['id' => $anime['mal_id'], 'category_id' => $category_id])}}" class="btn btn-dark mt-2 w-100">Continua ...</a>
                     </div>
                 </div>
             </div>
