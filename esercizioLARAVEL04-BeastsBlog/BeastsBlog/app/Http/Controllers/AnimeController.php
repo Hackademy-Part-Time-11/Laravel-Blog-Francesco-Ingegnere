@@ -29,6 +29,8 @@ class AnimeController extends Controller
             return [
                 'mal_id' => $anime['mal_id'],
                 'title' => $anime['title'],
+                'image' => $anime['images']['jpg']['image_url'],
+                'genres' => $anime['genres'],
             ];
         });
 

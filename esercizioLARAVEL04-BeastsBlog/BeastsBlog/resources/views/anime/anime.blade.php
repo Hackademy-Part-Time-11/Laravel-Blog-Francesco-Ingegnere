@@ -9,22 +9,27 @@
             <img src="{{$anime['images']['jpg']['large_image_url']}}" alt="{{$anime['title']}}" class="img-fluid">
         </div>
         <div class="col-md-8">
-            <h1>{{$anime['title']}}</h1>
-            <h2>{{$anime['titles']['1']['title']}}</h2>
+            <h1>{{$anime['title_english']}} ({{$anime['title_japanese']}})</h1>
 
-            <div>
-                <p>Punteggio: {{$anime['score']}}</p>
-                <p>Durata: {{$anime['duration']}}</p>
-                <p>Episodi: {{$anime['episodes']}}</p>
-                <p>Anno: {{$anime['year']}}</p>
-                <p>Rating: {{$anime['rating']}}</p>
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <p class="fs-5"><span class="fs-4">Durata: </span>  {{$anime['duration']}}</p>
+                    <p class="fs-5"><span class="fs-4">Episodi: </span> {{$anime['episodes']}}</p>
+                    <p class="fs-5"><span class="fs-4">Anno: </span> {{$anime['year']}}</p>   
+                </div>
+                <div class="col-lg-6">
+                    <p class="fs-5"><span class="fs-4">Punteggio: </span> {{$anime['score']}}</p>
+                    <p class="fs-5"><span class="fs-4">Rating: </span> {{$anime['rating']}}</p>
+                </div>
             </div>
 
             <div>
                 {!! nl2br( e($anime['synopsis'])) !!}
 
-                <p class="mt-4">inizio: {{date('d-m-Y', strtotime($anime['aired']['from']))}}</p>
-                <p>fine: {{date('d-m-Y', strtotime($anime['aired']['to']))}}</p>
+                <div class="mt-4 d-flex justify-content-around align-items-center w-100 align-content-center">
+                    <p class="fs-5"><span class="fs-4">inizio: </span>  {{date('d-m-Y', strtotime($anime['aired']['from']))}}</p>
+                    <p class="fs-5"><span class="fs-4">fine: </span>  {{date('d-m-Y', strtotime($anime['aired']['to']))}}</p>
+                </div>
             </div>
         </div>
     </div>
