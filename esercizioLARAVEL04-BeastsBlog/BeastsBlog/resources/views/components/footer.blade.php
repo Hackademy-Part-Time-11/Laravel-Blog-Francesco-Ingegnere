@@ -30,6 +30,6 @@
                 </div>
             </div>
         </div>
-        <p class="py-5 mb-0">© Copyright 2012 - 2023 | Beasts Blog by <a href="#">Francesco Ingegnere</a> | Laravel</p>
+        <p class="py-5 mb-0">© Copyright 2012 - 2023 | Beasts Blog by <a href="www.linkedin.com/in/francesco-ingegnere-web-developer">Francesco Ingegnere</a> | Laravel</p>
     </div>
 </div>
