@@ -14,9 +14,9 @@
                         <h5 class="card-title">{{$anime['title']}}</h5>
     
                         @foreach ($anime['genres'] as $genre)
+
+                            <a href="{{route('anime.genre', $genre['mal_id'])}}"><span class="card-text px-2 py-0 m-1 btn btn-secondary">{{$genre['name']}}</span></a>
                             
-                            <span class="card-text px-2 py-0 m-1 btn btn-secondary">{{$genre['name']}}</span>
-    
                         @endforeach
                         <br>
     
