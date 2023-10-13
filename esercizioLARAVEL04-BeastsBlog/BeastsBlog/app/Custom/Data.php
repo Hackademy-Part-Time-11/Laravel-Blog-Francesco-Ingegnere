@@ -39,3 +39,44 @@ Table categories {
 Ref: "articles"."category_id" < "categories"."id"
 
 */
+
+
+/* 
+
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table users {
+  id biginteger [primary key]
+  name varchar
+  surname varchar
+  birth_date timestamp
+  email email
+  address varchar
+  phone integer
+}
+
+Table books {
+  id biginteger [primary key]
+  title varchar
+  author varchar
+  year timestamp [note: 'year of publication']
+  quantity integer [note: 'quantity in stock']
+}
+
+Table orders {
+  id integer [primary key]
+  user_id biginteger
+  book_id biginteger
+  order_date timestamp
+  payment_state integer
+  shipping_address varchar
+}
+
+
+
+Ref: "users"."id" < "orders"."user_id"
+
+Ref: "books"."id" < "orders"."book_id"
+
+*/
