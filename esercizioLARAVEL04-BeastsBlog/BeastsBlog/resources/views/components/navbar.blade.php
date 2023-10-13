@@ -1,7 +1,7 @@
 {{-- navbar --}}
-<nav class="navbar navbar-expand-lg bg-body-tertiary py-4">
+<nav class="navbar navbar-expand-lg bg-body-tertiary py-1">
     <div class="container">
-        <a class="navbar-brand font-weight-bold" href="{{route('home')}}">
+        <a class="navbar-brand font-weight-bold fs-3 fw-bold" href="{{route('home')}}">
             <img src="/logoipsum-277.svg" alt="logo">
             BEASTS BLOG
         </a>
@@ -13,22 +13,22 @@
         <div class="collapse navbar-collapse justify-content-end text-end" id="navbarNavDropdown">
             <ul class="navbar-nav hovereggianti2">
                 <li class="nav-item p-2">
-                    <a class="nav-link active" aria-current="page" href="{{route('anime.genres')}}">Catalogo ANIME</a>
+                    <a class="nav-link active fs-5" aria-current="page" href="{{route('anime.genres')}}">Catalogo ANIME</a>
                 </li>
                 <li class="nav-item p-2">
-                    <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                    <a class="nav-link active fs-5" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
                 <li class="nav-item p-2">
-                    <a class="nav-link" href="{{route('articles')}}">Articoli</a>
+                    <a class="nav-link fs-5" href="{{route('articles')}}">Articoli</a>
                 </li>
                 <li class="nav-item p-2">
-                    <a class="nav-link" href="{{route('aboutMe')}}">Chi Siamo</a>
+                    <a class="nav-link fs-5" href="{{route('aboutMe')}}">Chi Siamo</a>
                 </li>
                 <li class="nav-item p-2">
-                    <a class="nav-link" href="{{route('contacts')}}">Contatti</a>
+                    <a class="nav-link fs-5" href="{{route('contacts')}}">Contatti</a>
                 </li>
                 <li class="nav-item p-2">
-                    <a class="nav-link" href="{{route('account')}}">LOGIN</a>
+                    <a class="nav-link fs-5" href="{{route('account')}}">LOGIN</a>
                 </li>
             </ul>
         </div>
