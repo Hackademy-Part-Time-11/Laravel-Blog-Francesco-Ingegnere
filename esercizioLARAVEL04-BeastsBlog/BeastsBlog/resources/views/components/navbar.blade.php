@@ -1,13 +1,13 @@
 {{-- navbar --}}
-<nav class="navbar navbar-expand-lg bg-body-tertiary py-1">
+<nav class="navbar navbar-expand-xl bg-body-tertiary py-1 shadow">
     <div class="container">
         <a class="navbar-brand font-weight-bold fs-3 fw-bold" href="{{route('home')}}">
             <img src="/logoipsum-277.svg" alt="logo">
             BEASTS BLOG
         </a>
     
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
         </button>
     
         <div class="collapse navbar-collapse justify-content-end text-end" id="navbarNavDropdown">
@@ -27,7 +27,7 @@
                 <li class="nav-item p-2">
                     <a class="nav-link fs-5" href="{{route('contacts')}}">Contatti</a>
                 </li>
-                <li class="nav-item p-2">
+                <li class="nav-item p-2 text-center">
                     <a class="nav-link fs-5" href="{{route('account')}}">LOGIN</a>
                 </li>
             </ul>

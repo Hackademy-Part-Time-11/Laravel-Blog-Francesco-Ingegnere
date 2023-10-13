@@ -13,3 +13,29 @@ class Data {
         ];
     }
 }
+
+
+/* 
+
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table articles {
+  id biginteger [primary key]
+  title varchar
+  category_id biginteger
+  description varchar
+  visibile integer
+  created_at timestamp 
+}
+
+Table categories {
+  id integer [primary key]
+  name varchar
+}
+
+
+
+Ref: "articles"."category_id" < "categories"."id"
+
+*/

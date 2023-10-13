@@ -12,7 +12,7 @@
         
     </div>
 </div>
-<div class="bg-body-tertiary">
+<div class="bg-black">
     <div class="container py-2">
         <div class="row border-bottom mx-auto">
             <div class="row justify-content-center py-2">
@@ -30,6 +30,6 @@
                 </div>
             </div>
         </div>
-        <p class="py-5 mb-0">© Copyright 2012 - 2023 | Beasts Blog by <a href="www.linkedin.com/in/francesco-ingegnere-web-developer">Francesco Ingegnere</a> | Laravel</p>
+        <p class="py-5 mb-0">© Copyright 2012 - 2023 | Beasts Blog by <a href="www.linkedin.com/in/francesco-ingegnere-web-developer" class="text-white">Francesco Ingegnere</a> | Laravel</p>
     </div>
 </div>

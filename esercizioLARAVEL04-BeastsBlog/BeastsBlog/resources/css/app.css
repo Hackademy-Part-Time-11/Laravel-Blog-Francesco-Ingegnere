@@ -4,6 +4,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #a69cac;
 }
 
 button{
@@ -34,10 +35,12 @@ nav.bg-body-tertiary{
 
     ul.hovereggianti2 li a{
         color: black !important;
+        border-radius: 5px;
     }
 
     ul.hovereggianti2>li>a:hover{
-        color: white !important;
+        background-color: black !important;
+        color: #ffb600 !important;
     } 
 
 nav ul li:last-of-type a{
@@ -45,11 +48,8 @@ nav ul li:last-of-type a{
     color: white !important;
     border-radius: 5px;
 }
-    nav ul li:last-of-type a:hover{
-        background-color: white;
-        color: black !important;
-        border-radius: 5px;
-    }
+
+
 
 /* footer */
 
@@ -58,14 +58,18 @@ footer h6, footer div.bg-black i{
 }
 
 footer div.bg-black p{
-    color: white;
+    color: #ffb600;
+}
+
+footer div.bg-black p a{
+    color: #ffb600;
 }
 
 footer a, footer p, footer i{
     text-decoration: none;
-    color: black;
+    color: #ffb600;
 }
 
 footer i:hover{
-    color: #ffb600 !important;
+    color: white !important;
 }
