@@ -3,21 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Article;
 
 class ArticlesController extends Controller
 {
-    private $articles = [
-        ['id' => 1, 'title' => 'Articolo #1', 'category' => 'Finanza', 'description' => "Questa è una breve descrizione dell'articolo...", 'visible' => true],
-        ['id' => 2, 'title' => 'Articolo #2', 'category' => 'Gossip', 'description' => "Questa è una breve descrizione dell'articolo...", 'visible' => true],
-        ['id' => 3, 'title' => 'Articolo #3', 'category' => 'Sport', 'description' => "Questa è una breve descrizione dell'articolo...", 'visible' => false],
-        ['id' => 4, 'title' => 'Articolo #4', 'category' => 'Cronaca', 'description' => "Questa è una breve descrizione dell'articolo...", 'visible' => true],
-        ['id' => 5, 'title' => 'Articolo #5', 'category' => 'Tech', 'description' => "Questa è una breve descrizione dell'articolo...", 'visible' => false],
-        ['id' => 6, 'title' => 'Articolo #6', 'category' => 'Natura', 'description' => "Questa è una breve descrizione dell'articolo...", 'visible' => true],
-    ];
-
     public function showArticles() {
         $articleVisible = [];
-        foreach($this->articles as $article) {
+        foreach(Article::all() as $article) {
             if($article['visible']){
                 array_push($articleVisible, $article);
             }
@@ -25,14 +17,45 @@ class ArticlesController extends Controller
         return view('pages.articles', ['articles' => $articleVisible]);
     }
 
-    public function showArticle($id) {
-        foreach($this->articles as $article) {
-            if($article['id'] == $id){
-                return view('pages.article', ['articles' => $this->articles[$id-1]]);
-            }
-        }
-        
-        return view('pages.articleNull');
-        
+    public function showArticle(Article $article) {
+
+        return view('pages.article', ['articles' => $article]);
+         
+    }
+
+    public function insertData() {
+        Article::create([
+            'title' => 'Titolo #1',
+            'category' => 'Economia',
+            'description' => 'Articolo di economia',
+            'visible' => true,
+            'body' => '...',
+        ]);
+
+        Article::create([
+            'title' => 'Titolo #2',
+            'category' => 'Esteri',
+            'description' => 'Articolo di esteri',
+            'visible' => true,
+            'body' => '...',
+        ]);
+
+        Article::create([
+            'title' => 'Titolo #3',
+            'category' => 'Politica',
+            'description' => 'Articolo di politica',
+            'visible' => true,
+            'body' => '...',
+        ]);
+
+        $article = new Article();
+
+        $article->title = 'Titolo #4';
+        $article->category = 'Sport';
+        $article->description = 'Articolo di sport';
+        $article->visible = true;
+        $article->body = '...';
+
+        $article->save();
     }
 }

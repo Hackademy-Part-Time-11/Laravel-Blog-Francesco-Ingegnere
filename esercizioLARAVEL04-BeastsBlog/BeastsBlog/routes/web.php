@@ -18,7 +18,7 @@ Route::get('/', [App\Http\Controllers\PageController::class, 'showHome'])->name(
 
 Route::get('/articoli', [App\Http\Controllers\ArticlesController::class, 'showArticles'])->name('articles');
 
-Route::get('/articoli/{id}', [App\Http\Controllers\ArticlesController::class, 'showArticle'])->name('article');
+Route::get('/articoli/{article}', [App\Http\Controllers\ArticlesController::class, 'showArticle'])->name('article');
 
 Route::get('/chi-siamo', [App\Http\Controllers\PageController::class, 'showAboutMe'])->name('aboutMe');
 
@@ -35,3 +35,6 @@ Route::get('/anime/generi', [App\Http\Controllers\AnimeController::class, 'genre
 Route::get('/anime/generi/{id}', [App\Http\Controllers\AnimeController::class, 'genre'])->name('anime.genre');
 
 Route::get('/anime/view/{id}/{category_id?}', [App\Http\Controllers\AnimeController::class, 'anime'])->name('anime.anime');
+
+
+Route::get('/insert-data', [App\Http\Controllers\ArticlesController::class, 'insertData']);
