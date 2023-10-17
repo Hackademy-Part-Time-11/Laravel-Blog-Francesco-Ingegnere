@@ -2,7 +2,7 @@
 
     <x-slot:title>Anime</x-slot>
 
-    <div class="text-center mb-5">
+    <div class="text-center my-5">
         <h1>{{$anime['title']}}</h1>
         <h2> {{$anime['title_japanese']}}</h2>
     </div>

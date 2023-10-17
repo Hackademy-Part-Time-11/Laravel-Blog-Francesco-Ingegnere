@@ -1,5 +1,5 @@
 {{-- navbar --}}
-<nav class="navbar navbar-expand-xl bg-body-tertiary py-1 shadow">
+<nav class="navbar navbar-expand-xl bg-body-tertiary py-1 shadow fixed-top">
     <div class="container">
         <a class="navbar-brand font-weight-bold fs-3 fw-bold" href="{{route('home')}}">
             <img src="/logoipsum-277.svg" alt="logo">

@@ -15,7 +15,7 @@
                 <x-navbar />
             </header>
     
-            <main class="container mt-5 flex-grow-1">
+            <main class="container mt-5 pt-5 flex-grow-1">
                 {{ $slot }}
             </main>
 

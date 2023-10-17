@@ -2,7 +2,7 @@
 
     <x-slot:title>Elenco ANIME per genere {{$titleGenre}}</x-slot>
 
-    <h1 class="mb-5">Elenco Anime {{$titleGenre}}</h1>
+    <h1 class="my-5">Elenco Anime {{$titleGenre}}</h1>
 
     <ul class="row">
 

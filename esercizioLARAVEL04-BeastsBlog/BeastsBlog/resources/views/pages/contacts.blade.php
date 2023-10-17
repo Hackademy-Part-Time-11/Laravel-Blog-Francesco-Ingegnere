@@ -2,7 +2,7 @@
 
     <x-slot:title>Contatti</x-slot>
 
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-lg-6 mx-auto">
             <h1>Contatti</h1>
     

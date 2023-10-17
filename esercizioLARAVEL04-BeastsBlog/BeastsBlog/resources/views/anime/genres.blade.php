@@ -2,7 +2,7 @@
 
     <x-slot:title>Genere Anime</x-slot>
 
-    <h1>Generi Anime</h1>
+    <h1 class="mt-5">Generi Anime</h1>
 
     <ul class="row mt-5">
 

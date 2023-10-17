@@ -2,7 +2,7 @@
 
     <x-slot:title>Articoli</x-slot>
 
-        <h1>Articoli</h1>
+        <h1 class="mt-5">Articoli</h1>
     
         <div class="row">
     
