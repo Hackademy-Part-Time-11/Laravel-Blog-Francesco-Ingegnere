@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Arr;
+use App\Models\AnimeCategory;
 
 class AnimeController extends Controller
 {
@@ -55,5 +56,20 @@ class AnimeController extends Controller
         $data = $responseJSON['data'];
 
         return view('anime.anime', ['anime' => $data, 'category_id' => $category_id]);
+    }
+
+    public function categoryAnime () {
+        $response = Http::get(self::URL.'genres/anime');
+
+        $categories = $response->json();
+
+        foreach ($categories['data'] as $category) {
+            $categoryAnime = new AnimeCategory();
+
+            $categoryAnime->id = $category['mal_id'];
+            $categoryAnime->name = $category['name'];
+
+            $categoryAnime->save();
+        }
     }
 }
