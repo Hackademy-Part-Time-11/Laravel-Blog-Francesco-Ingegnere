@@ -12,6 +12,9 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$articles->title}}</h5>
                     <p class="card-text">{{$articles->description}}</p>
+                    <div>
+                        <img src="{{Storage::url($articles->image)}}" alt="" class="img-fluid">
+                    </div>
                     <p class="card-text">{{$articles->body}}</p>
                     <a href="{{route('articles')}}" class="btn btn-primary bg-black text-decoration-none p-auto">Indietro</a>
                 </div>

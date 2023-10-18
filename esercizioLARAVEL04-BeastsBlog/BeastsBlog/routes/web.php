@@ -23,7 +23,6 @@ Route::get('/articoli/{article}', [App\Http\Controllers\ArticlesController::clas
 Route::get('/chi-siamo', [App\Http\Controllers\PageController::class, 'showAboutMe'])->name('aboutMe');
 
 Route::get('/contatti', [App\Http\Controllers\ContactController::class, 'showForm'])->name('contacts');
-
 Route::post('/contatti/invia', [App\Http\Controllers\ContactController::class, 'send'])->name('contacts.send');
 
 Route::get('/account', [App\Http\Controllers\PageController::class, 'showAccount'])->name('account');
@@ -37,5 +36,9 @@ Route::get('/anime/generi/{id}', [App\Http\Controllers\AnimeController::class, '
 Route::get('/anime/view/{id}/{category_id?}', [App\Http\Controllers\AnimeController::class, 'anime'])->name('anime.anime');
 
 
-Route::get('/insert-data', [App\Http\Controllers\ArticlesController::class, 'insertData']);
-Route::get('/insert-data-anime', [App\Http\Controllers\AnimeController::class, 'categoryAnime']);
+// Route::get('/insert-data', [App\Http\Controllers\ArticlesController::class, 'insertData']);
+// Route::get('/insert-data-anime', [App\Http\Controllers\AnimeController::class, 'categoryAnime']);
+
+
+Route::get('/account/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'create'])->name('account.articles.create');
+Route::post('/account/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'store'])->name('account.articles.store');
