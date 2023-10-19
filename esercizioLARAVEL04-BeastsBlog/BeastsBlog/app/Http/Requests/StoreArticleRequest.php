@@ -23,9 +23,9 @@ class StoreArticleRequest extends FormRequest
     {
         return [
             'title' => 'required|max:150',
-            'category' => 'required|max:40',
-            'description' => 'required|max:250',
-            'body' => 'max:5000'
+            'category' => 'required|max:20',
+            'description' => 'required|max:150',
+            'body' => 'required|max:5000'
         ];
     }
 
@@ -38,6 +38,7 @@ class StoreArticleRequest extends FormRequest
             'category.max' => 'La categoria non può essere più lungo di :max caratteri',
             'description.required' => 'La descrizione è obbligatoria',
             'description.max' => 'La descrizione non può essere più lungo di :max caratteri',
+            'body.required' => 'Il corpo dell\'articolo è obbligatorio',
             'body.max' => 'Il corpo dell\'articolo non può essere più lungo di :max caratteri',
         ];
     }

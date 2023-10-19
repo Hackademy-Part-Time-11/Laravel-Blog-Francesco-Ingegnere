@@ -9,12 +9,13 @@
             @if ($articles)
     
                 @foreach ($articles as $article)
-                    <div class="col-lg-4 col-md-6 col-12 g-3 px-2">
+                    <div class="col-lg-4 col-md-6 col-12 g-3 px-2 d-flex align-items-stretch">
                         <x-article-card 
                             :title="$article->title" 
                             :category="$article->category" 
                             :description="$article->description" 
                             :route="route('article', $article->id)"
+                            :image="$article->image ? Storage::url($article->image) : null"
                         />
                     </div>
                 @endforeach

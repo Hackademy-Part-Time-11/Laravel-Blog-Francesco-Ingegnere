@@ -37,7 +37,7 @@ class ArticlesController extends Controller
             // $fileName = $request->file('image')->getClientOriginalName(); // nome originale file
             $fileName = \Illuminate\Support\Str::slug($article->title).'.'.$request->file('image')->extension();
 
-            $imagePath = $request->file('image')->storeAs("public/articles/$article->id", $fileName);
+            $imagePath = $request->file('image')->storeAs("public/images/$article->id", $fileName);
 
             $article->image = $imagePath;
 

@@ -16,8 +16,8 @@ return new class extends Migration
             $table->id();
             
             $table->string('title', 150);
-            $table->string('category', 40);
-            $table->string('description', 250);
+            $table->string('category', 20);
+            $table->string('description', 150);
             $table->boolean('visible')->default(true);
             $table->text('body')->nullable();
 
