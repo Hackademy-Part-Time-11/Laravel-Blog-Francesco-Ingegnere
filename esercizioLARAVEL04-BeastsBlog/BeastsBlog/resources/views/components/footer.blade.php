@@ -4,9 +4,15 @@
             <div class="col">
                 <h6 class="py-2">Scrivi e pubblica il tuo articolo BESTIALE su BEASTS-BLOG</h6>
             </div>
+            
+            @auth
+
             <div class="col text-end">
                 <a href="{{route('account.articles.create')}}"><button type="button" class="btn btn-primary px-5" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Scrivi il tuo articolo</button></a>
             </div>
+
+            @endauth
+
             <div class="col text-end">
                 <a href="{{route('contacts')}}"><button type="button" class="btn btn-primary px-5" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"><i class="fa-solid fa-square-phone"></i> Contattaci</button></a>
             </div>

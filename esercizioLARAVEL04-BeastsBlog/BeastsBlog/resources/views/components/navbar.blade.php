@@ -27,9 +27,43 @@
                 <li class="nav-item p-2">
                     <a class="nav-link fs-5" href="{{route('contacts')}}">Contatti</a>
                 </li>
+
+                @auth
+
+                {{-- <li class="nav-item dropdown p-2">
+                    <a class="nav-link dropdown-toggle fs-5" href="{{route('home')}}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ auth()->user()->name }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="{{route('account')}}">{{ auth()->user()->email }}</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit">LOGOUT</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li> --}}
+
                 <li class="nav-item p-2 text-center">
-                    <a class="nav-link fs-5" href="{{route('account')}}">LOGIN</a>
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-black">LOGOUT</button>
+                    </form>
                 </li>
+
+                @else
+
+                <li class="nav-item p-2 text-center">
+                    <form action="/login">
+                        @csrf
+                        <button type="submit" class="btn btn-black">LOGIN</button>
+                    </form>
+                </li>
+
+                @endauth
+
             </ul>
         </div>
     </div>

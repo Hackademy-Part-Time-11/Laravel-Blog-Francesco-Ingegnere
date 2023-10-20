@@ -39,6 +39,10 @@ Route::get('/anime/view/{id}/{category_id?}', [App\Http\Controllers\AnimeControl
 // Route::get('/insert-data', [App\Http\Controllers\ArticlesController::class, 'insertData']);
 Route::get('/insert-data-anime', [App\Http\Controllers\AnimeController::class, 'categoryAnime']);
 
+Route::prefix('account')->middleware('auth')->group(function() {
+    Route::get('/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'create'])->name('account.articles.create');
+    Route::post('/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'store'])->name('account.articles.store');
+});
 
-Route::get('/account/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'create'])->name('account.articles.create');
-Route::post('/account/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'store'])->name('account.articles.store');
+
+Route::get('/account', [App\Http\Controllers\AccountController::class, 'index'])->name('account')->middleware('auth');
