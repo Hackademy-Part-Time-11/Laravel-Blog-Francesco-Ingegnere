@@ -8,4 +8,8 @@
             <a href="{{route('account.articles.create')}}">Aggiungi articolo</a>
         </div>
 
+        <div class="mt-5">
+            <a href="{{route('account.settings')}}">Impostazioni Account</a>
+        </div>
+
 </x-layout-account>
