@@ -26,6 +26,10 @@ button a{
     color: white !important;
 }
 
+button.btnAccess:hover {
+    border-color: black !important;
+}
+
 
 /* navBar */
 
