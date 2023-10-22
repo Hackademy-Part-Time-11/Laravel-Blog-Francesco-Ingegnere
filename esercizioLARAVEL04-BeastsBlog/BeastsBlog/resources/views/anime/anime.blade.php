@@ -2,7 +2,7 @@
 
     <x-slot:title>Anime</x-slot>
 
-    <div class="card">
+    <div class="card shadow">
         <div class="card-header text-white bg-black">
             <div class="text-center">
                 <h1>{{$anime['title']}}</h1>

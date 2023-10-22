@@ -4,7 +4,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #a69cac;
+
 }
 
 button{
@@ -14,7 +14,7 @@ button{
 }
 
     button:hover{
-        background-color: #a69cac !important;
+        background-color: #ffb600 !important;
         color: black !important;
     }
 

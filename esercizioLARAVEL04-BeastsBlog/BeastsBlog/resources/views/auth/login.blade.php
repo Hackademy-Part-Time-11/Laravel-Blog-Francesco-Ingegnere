@@ -4,7 +4,7 @@
 
         <div class="row mt-5">
             <div class="col-lg-4 mx-auto">
-                <div class="card">
+                <div class="card shadow">
                     <div class="card-header text-center text-white bg-black">
                         ACCEDI
                     </div>
@@ -32,8 +32,8 @@
                             </div>
                         </form>
                     </div>
-                    <div class="card-footer">
-                        <a href="{{route('register')}}" class="d-block text-center">Registrati</a>
+                    <div class="card-footer text-center">
+                        Clicca qui per <a href="{{route('register')}}" class="text-secondary">registrarti</a>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 
     <x-slot:title>Impostazioni</x-slot>
 
-    <div class="card">
+    <div class="card shadow">
         <div class="card-header text-white bg-black">
             <h1 class="text-center">Impostazioni</h1>
         </div>

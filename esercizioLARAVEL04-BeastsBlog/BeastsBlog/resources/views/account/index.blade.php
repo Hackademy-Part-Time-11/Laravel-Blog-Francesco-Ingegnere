@@ -2,7 +2,7 @@
 
     <x-slot:title>Account</x-slot>
 
-    <div class="card">
+    <div class="card shadow">
         <div class="card-header text-white bg-black">
             <h1 class="text-center">Benvenuto {{ auth()->user()->name }}</h1>
         </div>

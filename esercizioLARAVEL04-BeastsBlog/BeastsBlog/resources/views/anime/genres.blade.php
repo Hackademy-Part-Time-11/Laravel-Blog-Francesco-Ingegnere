@@ -2,9 +2,9 @@
 
     <x-slot:title>Genere Anime</x-slot>
 
-    <div class="card">
+    <div class="card shadow">
         <div class="card-header text-white bg-black">
-            <h1>Generi Anime</h1>
+            <h1 class="text-center">Generi Anime</h1>
         </div>
         <div class="card-body">
 

@@ -4,7 +4,7 @@
 
     <div class="row mt-5">
         <div class="col-lg-6 mx-auto">
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-header bg-black text-white">
                     <h1>Contatti</h1>
                 </div>

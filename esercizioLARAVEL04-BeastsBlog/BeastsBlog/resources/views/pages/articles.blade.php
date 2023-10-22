@@ -2,14 +2,14 @@
 
     <x-slot:title>Articoli</x-slot>
 
-        <h1 class="mt-5">Articoli</h1>
+        <h1 class="text-center my-5">Articoli</h1>
     
         <div class="row">
     
             @if ($articles)
     
                 @foreach ($articles as $article)
-                    <div class="col-lg-4 col-md-6 col-12 g-3 px-2 d-flex align-items-stretch">
+                    <div class="col-lg-4 col-md-6 col-12 g-3 px-2 d-flex align-items-stretch mb-5">
                         <x-article-card 
                             :title="$article->title" 
                             :category="$article->category" 

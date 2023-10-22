@@ -2,7 +2,7 @@
 
     <x-slot:title>Home</x-slot>
 
-    <div class="card">
+    <div class="card shadow">
         <div class="card-header text-white bg-black">
             <div class="d-flex justify-content-around">
                 <h2>ARTICOLI</h2>

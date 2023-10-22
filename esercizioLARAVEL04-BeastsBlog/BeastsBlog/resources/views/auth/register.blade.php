@@ -5,7 +5,7 @@
 
         <div class="row">
             <div class="col-lg-4 mx-auto">
-                <div class="card">
+                <div class="card shadow">
                     <div class="card-header text-center text-white bg-black">
                         REGISTRATI
                     </div>

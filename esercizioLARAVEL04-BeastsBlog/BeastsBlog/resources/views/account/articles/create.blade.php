@@ -1,6 +1,6 @@
 <x-layout-main>
     
-    <div class="card">
+    <div class="card shadow">
         <div class="card-header text-white bg-black">
             <h1 class="text-center">Crea un nuovo articolo</h1>
         </div>    
