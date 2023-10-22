@@ -69,3 +69,19 @@ footer i:hover{
 div.card {
     border-color: #ffb600 !important;
 }
+
+div.headerArticles{
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background-color: white;
+    height: 50vh;
+    background-image: url('/public/bgArticles.jpg');
+    background-size: contain;
+}
+
+div.headerAnime{
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    background-color: white;
+    height: 50vh;
+    background-image: url('/public/bgAnime.jpg');
+    background-size: contain;
+}

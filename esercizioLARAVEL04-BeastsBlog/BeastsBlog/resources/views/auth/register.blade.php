@@ -2,12 +2,11 @@
 
     <x-slot:title>Account</x-slot>
 
-        <h1 class="mt-5">Benvenuto Utente</h1>
 
         <div class="row">
             <div class="col-lg-4 mx-auto">
                 <div class="card">
-                    <div class="card-header text-center">
+                    <div class="card-header text-center text-white bg-black">
                         REGISTRATI
                     </div>
                     <div class="card-body">
