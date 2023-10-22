@@ -10,10 +10,11 @@ body {
 button{
     background-color: black !important;
     color: white !important;
+    border-color: #ffb600 !important;
 }
 
     button:hover{
-        background-color: white !important;
+        background-color: #a69cac !important;
         color: black !important;
     }
 
@@ -33,43 +34,38 @@ nav.bg-body-tertiary{
     background-color: #ffb600 !important;
 }
 
-    ul.hovereggianti2 li a{
-        color: black !important;
-        border-radius: 5px;
-    }
-
-    ul.hovereggianti2>li>a:hover{
-        background-color: black !important;
-        color: #ffb600 !important;
-    } 
-
-nav ul li:last-of-type a{
-    background-color: black;
-    color: white !important;
-    border-radius: 5px;
-}
-
-
-
 /* footer */
 
 footer h6, footer div.bg-black i{
     color: #ffb600;
 }
 
+footer div.bg-blacks {
+    background-color: #ffb600 !important;
+}
+
 footer div.bg-black p{
-    color: #ffb600;
+    color: white;
 }
 
 footer div.bg-black p a{
-    color: #ffb600;
+    color: white;
 }
 
 footer a, footer p, footer i{
     text-decoration: none;
-    color: #ffb600;
+    color: black;
+}
+
+footer hr {
+    color: black;
 }
 
 footer i:hover{
     color: white !important;
+}
+
+
+div.card {
+    border-color: #ffb600 !important;
 }

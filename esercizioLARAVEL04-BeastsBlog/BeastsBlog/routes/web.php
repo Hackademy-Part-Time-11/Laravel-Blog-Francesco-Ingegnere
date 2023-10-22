@@ -47,5 +47,7 @@ Route::prefix('account')->middleware(['auth', 'verified'])->group(function() {
 
 Route::get('/account', [App\Http\Controllers\AccountController::class, 'index'])->name('account')->middleware(['auth', 'verified']);
 
-Route::get('/impostazioni', [App\Http\Controllers\AccountController::class, 'settings'])->name('account.settings')->middleware(['auth', 'verified']);
-Route::post('/impostazioni/store', [App\Http\Controllers\AccountController::class, 'settingStore'])->name('account.settings.store')->middleware(['auth', 'verified']);
+Route::prefix('impostazioni')->middleware(['auth', 'verified'])->group(function() {
+    Route::get('/', [App\Http\Controllers\AccountController::class, 'settings'])->name('account.settings');
+    Route::post('/store', [App\Http\Controllers\AccountController::class, 'settingStore'])->name('account.settings.store');
+});

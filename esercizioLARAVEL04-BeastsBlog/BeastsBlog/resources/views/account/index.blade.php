@@ -5,11 +5,8 @@
         <h1 class="mt-5">Benvenuto {{ auth()->user()->name }}</h1>
 
         <div class="mt-5">
-            <a href="{{route('account.articles.create')}}">Aggiungi articolo</a>
+            <a href="{{route('account.articles.create')}}"><button class="btn btn-black">Aggiungi articolo</button></a>
         </div>
 
-        <div class="mt-5">
-            <a href="{{route('account.settings')}}">Impostazioni Account</a>
-        </div>
 
 </x-layout-account>

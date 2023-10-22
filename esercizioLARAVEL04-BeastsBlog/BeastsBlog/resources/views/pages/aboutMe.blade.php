@@ -2,6 +2,13 @@
 
     <x-slot:title>Chi Siamo</x-slot>
 
-    <h1 class="mt-5">Chi Siamo</h1>
-    <p>{{$description}}</p>
+    <div class="card mt-5">
+        <div class="card-header text-white bg-black">
+            <h1>Chi Siamo</h1>
+        </div>
+
+        <div class="card-body">
+            <p>{{$description}}</p>
+        </div>
+    </div>
 </x-layout-main>

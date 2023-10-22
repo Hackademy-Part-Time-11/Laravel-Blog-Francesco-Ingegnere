@@ -2,15 +2,23 @@
 
     <x-slot:title>Genere Anime</x-slot>
 
-    <h1 class="mt-5">Generi Anime</h1>
+    <div class="card">
+        <div class="card-header text-white bg-black">
+            <h1>Generi Anime</h1>
+        </div>
+        <div class="card-body">
 
-    <ul class="row mt-5">
+            <ul class="row mt-5 ms-0">
+        
+                @foreach ($genres as $genre)
+                    <li class="col-xxl-3 col-lg-4 col-md-6 col-12 list-unstyled flex-wrap"><a href="{{route('anime.genre', $genre['mal_id'])}}" class="text-decoration-none py-1 my-1 fs-5 w-100"><button class="btn btn-black w-100 my-1">{{$genre['name']}}</button></a></li>
+                @endforeach
+        
+            </ul>
 
-        @foreach ($genres as $genre)
-            <li class="col-xxl-3 col-lg-4 col-md-6 col-12 list-unstyled flex-wrap"><a href="{{route('anime.genre', $genre['mal_id'])}}" class="text-decoration-none btn btn-dark py-1 my-1 fs-5 w-100">{{$genre['name']}}</a></li>
-        @endforeach
+        </div>
+    </div>
 
-    </ul>
 
 
 </x-layout-main>

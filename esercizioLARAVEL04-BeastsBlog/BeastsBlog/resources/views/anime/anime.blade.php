@@ -62,9 +62,9 @@
     </div>
 
     @if ($category_id)
-        <a href="{{route('anime.genre', $category_id)}}" class="text-decoration-none p-auto btn btn-dark mt-3 ms-5">indietro</a>
+        <a href="{{route('anime.genre', $category_id)}}" class="text-decoration-none p-auto mt-3 ms-5"><button class="btn btn-black">indietro</button></a>
     @else
-        <a href="{{route('anime.genres')}}" class="text-decoration-none p-auto btn btn-dark mt-3 ms-5">indietro ai generi</a>
+        <a href="{{route('anime.genres')}}" class="text-decoration-none p-auto mt-3 ms-5"><button class="btn btn-black">indietro ai generi</button></a>
     @endif
 
 

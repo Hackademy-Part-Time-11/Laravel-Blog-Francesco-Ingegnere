@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\SettingAccountRequest;
+use App\Actions\Fortify\UpdateUserPassword;
 
 class AccountController extends Controller
 {
@@ -15,12 +15,13 @@ class AccountController extends Controller
         return view('account.settings');
     }
 
-    public function settingStore(SettingAccountRequest $request) {
-        $user = \App\Models\User::find(auth()->user()->id);
+    public function settingStore(Request $request) {
 
-        $user->update([
+        (new UpdateUserPassword())->update(auth()->user(), [
             'name' => $request->name,
+            'current_password' => $request->current_password,
             'password' => $request->password,
+            'password_confirmation' => $request->password_confirmation,
         ]);
 
         return redirect()->back()->with(['success' => 'Dati modificati con successo']);
