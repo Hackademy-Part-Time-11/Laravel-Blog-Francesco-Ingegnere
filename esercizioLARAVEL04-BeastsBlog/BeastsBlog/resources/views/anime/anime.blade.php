@@ -22,8 +22,8 @@
                                 {!! nl2br( e($anime['synopsis'])) !!}
                             </p>
                         </div>
-                        <div class="col-lg-12 mt-lg-5 d-flex mt-5 bg-secondary rounded py-4">
-                            <div class="col-6 ps-4">
+                        <div class="col-12 mt-lg-5 row mt-5 bg-secondary rounded py-4">
+                            <div class="col-12 col-md-6 ps-4">
                                 <div class="row px-3">
                                     <p class="fs-5 col-lg-6 col-12 fw-semibold">Durata: </p>
                                     <p class="fs-5 col-lg-6 col-12"> {{$anime['duration']}}</p>
@@ -41,7 +41,7 @@
                                     <p class="fs-5 col-lg-6 col-12"> {{$anime['source']}}</p>
                                 </div>
                             </div>
-                            <div class="col-6 ps-4">
+                            <div class="col-12 col-md-6 ps-4">
                                 <div class="row px-3">
                                     <p class="fs-5 col-lg-6 col-12 fw-semibold">Anno: </p>
                                     <p class="fs-5 col-lg-6 col-12"> {{$anime['year']}}</p>
