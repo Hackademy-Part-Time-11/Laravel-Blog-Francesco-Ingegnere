@@ -7,13 +7,13 @@ body {
 
 }
 
-button{
+button, a.btn-black{
     background-color: black !important;
     color: white !important;
     border-color: #ffb600 !important;
 }
 
-    button:hover{
+    button:hover, a.btn-black:hover{
         background-color: #ffb600 !important;
         color: black !important;
     }
@@ -79,7 +79,8 @@ div.headerArticles{
     background-color: white;
     height: 50vh;
     background-image: url('/public/bgArticles.jpg');
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 div.headerAnime{
@@ -87,5 +88,6 @@ div.headerAnime{
     background-color: white;
     height: 50vh;
     background-image: url('/public/bgAnime.jpg');
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

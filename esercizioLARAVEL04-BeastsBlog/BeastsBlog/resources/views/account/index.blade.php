@@ -7,8 +7,9 @@
             <h1 class="text-center">Benvenuto {{ auth()->user()->name }}</h1>
         </div>
         <div class="card-body">
-            <div class="mt-5">
-                <a href="{{route('account.articles.create')}}"><button class="btn btn-black">Aggiungi articolo</button></a>
+            <div class="mt-5 text-center">
+                <a href="{{route('articles.create')}}"><button class="btn btn-black">Aggiungi articolo</button></a>
+                <a href="{{route('articles.index')}}"><button class="btn btn-black">I tuoi articoli</button></a>
             </div>
         </div>
     </div>

@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\PageController::class, 'showHome'])->name('home');
 
-Route::get('/articoli', [App\Http\Controllers\ArticlesController::class, 'showArticles'])->name('articles');
+Route::get('/articoli', [App\Http\Controllers\PageController::class, 'showArticles'])->name('articles');
 
-Route::get('/articoli/{article}', [App\Http\Controllers\ArticlesController::class, 'showArticle'])->name('article');
+Route::get('/articoli/{article}', [App\Http\Controllers\PageController::class, 'showArticle'])->name('article');
 
 Route::get('/chi-siamo', [App\Http\Controllers\PageController::class, 'showAboutMe'])->name('aboutMe');
 
@@ -40,8 +40,10 @@ Route::get('/anime/view/{id}/{category_id?}', [App\Http\Controllers\AnimeControl
 Route::get('/insert-data-anime', [App\Http\Controllers\AnimeController::class, 'categoryAnime']);
 
 Route::prefix('account')->middleware(['auth', 'verified'])->group(function() {
-    Route::get('/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'create'])->name('account.articles.create');
-    Route::post('/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'store'])->name('account.articles.store');
+    /* Route::get('/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'create'])->name('account.articles.create');
+    Route::post('/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'store'])->name('account.articles.store'); */
+
+    Route::resource('articles', App\Http\Controllers\ArticleController::class);
 });
 
 

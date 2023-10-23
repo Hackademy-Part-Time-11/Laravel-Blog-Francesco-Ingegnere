@@ -10,7 +10,7 @@
 
                 @auth
 
-                <a href="{{route('account.articles.create')}}"><button type="button" class="btn btn-primary px-5" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Scrivi il tuo articolo</button></a>
+                <a href="{{route('articles.create')}}"><button type="button" class="btn btn-primary px-5" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Scrivi il tuo articolo</button></a>
 
                 @endauth
 

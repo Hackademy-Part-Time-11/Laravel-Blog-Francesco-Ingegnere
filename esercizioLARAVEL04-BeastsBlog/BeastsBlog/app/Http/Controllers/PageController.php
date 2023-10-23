@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreArticleRequest;
 use Illuminate\Http\Request;
+use App\Models\Article;
 
 class PageController extends Controller
 {
@@ -18,5 +20,21 @@ class PageController extends Controller
 
     public function showAccount() {
         return view('account');
+    }
+
+    public function showArticles() {
+        $articleVisible = [];
+        foreach(Article::all() as $article) {
+            if($article['visible']){
+                array_push($articleVisible, $article);
+            }
+        }
+        return view('pages.articles', ['articles' => $articleVisible]);
+    }
+
+    public function showArticle(Article $article) {
+
+        return view('pages.article', ['articles' => $article]);
+         
     }
 }

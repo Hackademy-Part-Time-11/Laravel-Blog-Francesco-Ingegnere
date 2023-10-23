@@ -2,22 +2,16 @@
     
     <div class="card shadow">
         <div class="card-header text-white bg-black">
-            <h1 class="text-center">Crea un nuovo articolo</h1>
+            <h1 class="text-center">Modifica il tuo articolo</h1>
         </div>    
         <div class="card-body">
-            
-            {{--     @if ($errors->any())
-                <div class="alert alert-danger">
-                    @foreach ($errors->all() as $error)
-                        {{$error}} <br>
-                    @endforeach
-                </div>  
-                @endif --}}
+
             
             <x-success />
         
-            <form action="{{route('articles.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('articles.update', $article)}}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="row g-3">
                     <div class="col-12">
                         <label for="title">Titolo</label>
@@ -27,7 +21,7 @@
                             id="title"
                             class="form-control @error('title') is-invalid @enderror"
                             maxlength="150"
-                            value="{{old('title')}}"
+                            value="{{old('title', $article->title)}}"
                         >    
                         @error('title')
                             <span class="text-danger">{{$message}}</span>
@@ -41,7 +35,7 @@
                             id="category"
                             class="form-control @error('category') is-invalid @enderror"
                             maxlength="40"
-                            value="{{old('category')}}"
+                            value="{{old('category', $article->category)}}"
                         >    
                         @error('category')
                             <span class="text-danger">{{$message}}</span>
@@ -54,7 +48,7 @@
                             id="description"
                             class="form-control @error('description') is-invalid @enderror"
                             maxlength="250"
-                        >{{old('description')}}</textarea>    
+                        >{{old('description', $article->description)}}</textarea>    
                         @error('description')
                             <span class="text-danger">{{$message}}</span>
                         @enderror    
@@ -76,17 +70,18 @@
                             class="form-control @error('body') is-invalid @enderror"
                             rows="10"
                             maxlength="5000"
-                        >{{old('body')}}</textarea>    
+                        >{{old('body', $article->body)}}</textarea>    
                         @error('body')
                             <span class="text-danger">{{$message}}</span>
                         @enderror    
                     </div>    
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-black">Inserisci Articolo</button>
+                    <div class="col-12 d-flex justify-content-between">
+                        <a href="{{route('articles.index')}}" class="btn btn-black">Indietro</a>      
+                        <button type="submit" class="btn btn-black bg-danger">Modifica Articolo</button>
                     </div>    
                 </div>    
             </form>    
         </div>    
-    </div>        
+    </div>  
 
 </x-layout-main>
