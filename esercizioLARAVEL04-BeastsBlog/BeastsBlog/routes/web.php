@@ -44,6 +44,7 @@ Route::prefix('account')->middleware(['auth', 'verified'])->group(function() {
     Route::post('/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'store'])->name('account.articles.store'); */
 
     Route::resource('articles', App\Http\Controllers\ArticleController::class);
+    Route::resource('categories', \App\Http\Controllers\CategoryController::class);
 });
 
 
