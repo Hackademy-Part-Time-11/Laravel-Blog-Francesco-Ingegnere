@@ -41,9 +41,11 @@
                     {{ auth()->user()->email }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{route('account')}}">Profilo</a></li>
-                        <li><a class="dropdown-item" href="{{route('account.settings')}}">Impostazioni Account</a></li>
-                        <li class="text-center">
+                        <li><a class="dropdown-item" href="{{route('account')}}">Profilo {{ auth()->user()->name }}</a></li>
+                        <li><a class="dropdown-item" href="{{route('account.settings')}}">Modifica Password</a></li>
+                        <li><a class="dropdown-item" href="{{route('articles.create')}}">Aggiungi articolo</a></li>
+                        <li><a class="dropdown-item" href="{{route('categories.create')}}">Aggiungi categoria</a></li>
+                        <li class="text-center mt-3">
                             <form action="/logout" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-danger">LOGOUT</button>

@@ -35,7 +35,7 @@
                     </div>    
    
                     <div class="col-12">
-                        <button type="submit" class="btn btn-black">Inserisci Categorie</button>
+                        <button type="submit" class="btn btn-black">Inserisci Categoria</button>
                     </div>    
                 </div>    
             </form>    

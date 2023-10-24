@@ -18,7 +18,6 @@ class AccountController extends Controller
     public function settingStore(Request $request) {
 
         (new UpdateUserPassword())->update(auth()->user(), [
-            'name' => $request->name,
             'current_password' => $request->current_password,
             'password' => $request->password,
             'password_confirmation' => $request->password_confirmation,

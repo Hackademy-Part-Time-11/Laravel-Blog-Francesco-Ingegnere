@@ -13,14 +13,7 @@
                 <form action="{{route('account.settings.store')}}" method="POST">
         
                     @csrf
-        
-                    <div class="col-12 col-lg-6 mx-auto">
-                        <label for="name">Nome Utente</label>
-                        <input type="text" name="name" id="name" class="form-control" value="{{auth()->user()->name}}">
-                        @error('name')
-                            <span class="text-danger small">{{$message}}</span>
-                        @enderror
-                    </div>
+
                     <div class="col-12 col-lg-6 mx-auto">
                         <label for="current_password">Password Attuale</label>
                         <input type="password" name="current_password" id="current_password" class="form-control">
