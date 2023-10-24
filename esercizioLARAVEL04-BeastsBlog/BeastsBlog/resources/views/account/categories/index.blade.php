@@ -41,7 +41,11 @@
                 
             {{-- {{$articles->links}} --}}
 
-        </div>    
+        </div>  
+        
+        <div class="card-footer text-center">
+            <a href="{{route('categories.create')}}"><button class="btn btn-black">Aggiungi Categoria</button></a>
+        </div>
     </div>        
 
 </x-layout-main>

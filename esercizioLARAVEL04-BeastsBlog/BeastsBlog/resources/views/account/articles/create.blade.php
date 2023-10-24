@@ -35,14 +35,20 @@
                     </div>    
                     <div class="col-12">
                         <label for="category">Categoria</label>
-                        <input 
-                            type="text"
-                            name="category"
-                            id="category"
-                            class="form-control @error('category') is-invalid @enderror"
-                            maxlength="40"
-                            value="{{old('category')}}"
-                        >    
+                            
+                        <select id="category" name="category" class="form-select">
+
+                            <option selected disabled>Seleziona la categoria</option>
+
+                            @foreach ($categories as $category)
+
+                            <option value="{{$category->name}}">{{$category->name}}</option>
+                                
+                            @endforeach
+
+
+                        </select>
+
                         @error('category')
                             <span class="text-danger">{{$message}}</span>
                         @enderror    
