@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <p class="py-5 mb-0 container">© Copyright 2012 - 2023 | Beasts Blog by <a
+        <p class="py-5 mb-0 container">© Copyright 2012 - 2023 | Book Library by <a
                 href="https://www.linkedin.com/in/francesco-ingegnere-web-developer">Francesco Ingegnere</a> | Laravel
         </p>
     </div>
