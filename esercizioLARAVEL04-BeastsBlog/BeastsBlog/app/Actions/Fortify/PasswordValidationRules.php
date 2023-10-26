@@ -3,6 +3,7 @@
 namespace App\Actions\Fortify;
 
 use Laravel\Fortify\Rules\Password;
+use PHPUnit\Event\Test\Passed;
 
 trait PasswordValidationRules
 {
@@ -13,6 +14,10 @@ trait PasswordValidationRules
      */
     protected function passwordRules(): array
     {
-        return ['required', 'string', new Password, 'confirmed'];
+        $password = new Password;
+
+        $password->length(5);
+
+        return ['required', 'string', $password, 'confirmed'];
     }
 }

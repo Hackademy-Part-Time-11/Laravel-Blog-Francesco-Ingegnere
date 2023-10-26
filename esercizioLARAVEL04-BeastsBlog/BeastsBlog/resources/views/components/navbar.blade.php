@@ -44,7 +44,9 @@
                         <li><a class="dropdown-item" href="{{route('account')}}">Profilo {{ auth()->user()->name }}</a></li>
                         <li><a class="dropdown-item" href="{{route('account.settings')}}">Modifica Password</a></li>
                         <li><a class="dropdown-item" href="{{route('articles.create')}}">Aggiungi articolo</a></li>
+                        @if (auth()->user()->role == 'admin')
                         <li><a class="dropdown-item" href="{{route('categories.create')}}">Aggiungi categoria</a></li>
+                        @endif
                         <li class="text-center mt-3">
                             <form action="/logout" method="POST">
                                 @csrf
