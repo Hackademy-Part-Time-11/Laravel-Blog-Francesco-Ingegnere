@@ -1,11 +1,14 @@
-<x-layout-account>
+<x-layout>
 
     <x-slot:title>Login</x-slot>
+
+    <div class="container">
+        <h1 class="my-5">Library - Login</h1>
 
         <div class="row mt-5">
             <div class="col-lg-4 mx-auto">
                 <div class="card shadow">
-                    <div class="card-header text-center text-white bg-black">
+                    <div class="card-header text-center text-white bg-dark">
                         ACCEDI
                     </div>
                     <div class="card-body">
@@ -13,9 +16,9 @@
                             @csrf
                             <div class="row g-3">
                                 <div class="col-12">
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" class="form-control">
-                                    @error('email')
+                                    <label for="name">User Name</label>
+                                    <input type="text" name="name" id="name" class="form-control">
+                                    @error('name')
                                         <span class="text-danger small">{{$message}}</span>
                                     @enderror
                                 </div>
@@ -27,7 +30,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-black my-3">Accedi</button>
+                                    <button type="submit" class="btn btn-dark my-3">Accedi</button>
                                 </div>
                             </div>
                         </form>
@@ -39,4 +42,9 @@
             </div>
         </div>
 
-</x-layout-account>
+    </div>
+
+
+
+
+</x-layout>

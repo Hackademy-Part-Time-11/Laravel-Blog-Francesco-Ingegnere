@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
 
             $table->string('title', 150);
+            $table->string('author', 150);
             $table->string('year', 4);
             $table->string('genre', 40);
+            $table->text('description');
 
             $table->timestamps();
         });
