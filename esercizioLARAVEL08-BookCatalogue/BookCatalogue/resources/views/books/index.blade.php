@@ -4,11 +4,13 @@
 
     <div class="container mt-5">
 
-        <div class="row">
+        <x-success />
+
+        <div class="row g-3 justify-content-center">
 
             @foreach ($books as $book)
 
-                <div class="card" style="width: 18rem;">
+                <div class="card m-2" style="width: 18rem;">
                     <img src="{{Storage::url($book->image)}}" class="card-img-top my-5" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$book->title}}</h5>
