@@ -34,15 +34,15 @@
                         @enderror    
                     </div>    
                     <div class="col-12">
-                        <label for="category">Categoria</label>
+                        <label for="category_id">Categoria</label>
                             
-                        <select id="category" name="category" class="form-select">
+                        <select id="category_id" name="category_id" class="form-select">
 
-                            <option selected disabled>Seleziona la categoria</option>
+                            <option disabled value="">--- seleziona la categoria ---</option>
 
                             @foreach ($categories as $category)
 
-                            <option value="{{$category->name}}">{{$category->name}}</option>
+                            <option value="{{$category->id}}" @selected($category->id == old('category_id'))>{{$category->name}}</option>
                                 
                             @endforeach
 

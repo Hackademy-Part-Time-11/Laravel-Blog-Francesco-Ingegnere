@@ -14,10 +14,11 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::where('user_id', auth()->user()->id)->get();
+        // $articles = Article::where('user_id', auth()->user()->id)->get();
+        // $articles = auth()->user()->articles;
         // $articles = Article::paginate(4);
         
-        return view('account.articles.index', compact('articles'));
+        return view('account.articles.index');
     }
 
     /**

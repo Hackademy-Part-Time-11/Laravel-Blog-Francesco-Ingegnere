@@ -29,10 +29,8 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        $category = Category::create($request->all());
-        
-        $category->save();
-
+        Category::create($request->all());
+   
         return redirect()->route('categories.index')->with(['success' => 'Categoria creata correttamente']);
     }
 
@@ -58,7 +56,7 @@ class CategoryController extends Controller
     public function update(StoreCategoryRequest $request, Category $category)
     {
         $category->update($request->all());
-        return redirect()->back()->with(['success' => 'Categoria modificata con successo!']);
+        return redirect()->route('categories.index')->with(['success' => 'Categoria modificata con successo!']);
     }
 
     /**

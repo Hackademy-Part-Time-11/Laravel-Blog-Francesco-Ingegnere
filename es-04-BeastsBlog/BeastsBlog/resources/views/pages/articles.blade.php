@@ -12,7 +12,7 @@
                     <div class="col-lg-4 col-md-6 col-12 g-3 px-2 d-flex align-items-stretch mb-5">
                         <x-article-card 
                             :title="$article->title" 
-                            :category="$article->category" 
+                            :category="$article->category->name" 
                             :description="$article->description" 
                             :route="route('article', $article->id)"
                             :image="$article->image ? Storage::url($article->image) : null"

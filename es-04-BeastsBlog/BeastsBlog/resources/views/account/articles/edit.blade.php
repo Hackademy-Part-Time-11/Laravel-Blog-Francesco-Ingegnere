@@ -28,19 +28,25 @@
                         @enderror    
                     </div>    
                     <div class="col-12">
-                        <label for="category">Categoria</label>
-                        <input 
-                            type="text"
-                            name="category"
-                            id="category"
-                            class="form-control @error('category') is-invalid @enderror"
-                            maxlength="40"
-                            value="{{old('category', $article->category)}}"
-                        >    
+                        <label for="category_id">Categoria</label>
+                            
+                        <select id="category_id" name="category_id" class="form-select">
+
+                            <option disabled value="">--- seleziona la categoria ---</option>
+
+                            @foreach ($categories as $category)
+
+                            <option value="{{$category->id}}" @selected($category->id == old('category_id', $article->category_id))>{{$category->name}}</option>
+                                
+                            @endforeach
+
+
+                        </select>
+
                         @error('category')
                             <span class="text-danger">{{$message}}</span>
                         @enderror    
-                    </div>    
+                    </div>   
                     <div class="col-12">
                         <label for="description">Descrizione breve</label>
                         <textarea 

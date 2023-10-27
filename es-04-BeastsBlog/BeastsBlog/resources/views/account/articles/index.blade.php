@@ -15,15 +15,17 @@
                     <tr>
                         <th>#</th>
                         <th>TITLE</th>
+                        <th>CATEGORIA</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($articles as $article) 
+                    @foreach (auth()->user()->articles as $article) 
                     <tr>
                         <td>{{$article->id}}</td>
                         <td>{{$article->title}}</td>
-                        <td class="text-end d-flex justify-content-between">
+                        <td>{{$article->category->name}}</td>
+                        <td class="text-end d-flex justify-content-end">
                             <a href="{{route('articles.edit', $article)}}"><button class="btn btn-black">Modifica</button></a>
                             <a href="">
                                 <form action="{{route('articles.destroy', $article)}}" method="POST">

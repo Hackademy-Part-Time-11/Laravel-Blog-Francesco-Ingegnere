@@ -15,6 +15,7 @@
                     <tr>
                         <th>#</th>
                         <th>NOME CATEGORIE</th>
+                        <th>ARTICOLI COLLEGATI</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -23,6 +24,11 @@
                     <tr>
                         <td>{{$category->id}}</td>
                         <td>{{$category->name}}</td>
+                        <td>
+                            @foreach($category->articles as $article)
+                            <a href="{{route('articles.edit', $article)}}">{{$article->title}}</a><br>
+                            @endforeach
+                        </td>
                         <td class="text-end d-flex justify-content-between">
                             <a href="{{route('categories.edit', $category)}}"><button class="btn btn-black">Modifica</button></a>
                             <a href="">
