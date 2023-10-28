@@ -29,14 +29,14 @@
                             <a href="{{route('articles.edit', $article)}}">{{$article->title}}</a><br>
                             @endforeach
                         </td>
-                        <td class="text-end d-flex justify-content-between">
+                        <td class="text-end d-flex justify-content-end">
                             <a href="{{route('categories.edit', $category)}}"><button class="btn btn-black">Modifica</button></a>
-                            <a href="">
+                            <a href="" class="">
                                 <form action="{{route('categories.destroy', $category)}}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     
-                                    <button class="btn btn-danger bg-danger" type="submit">Cancella</button>
+                                    <button class="btn btn-danger bg-danger mx-2" type="submit">Cancella</button>
                                 </form>
                             </a>
                         </td>
