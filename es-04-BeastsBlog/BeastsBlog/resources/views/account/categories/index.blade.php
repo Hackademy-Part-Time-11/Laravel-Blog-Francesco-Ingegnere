@@ -8,6 +8,14 @@
         <div class="card-body">
             
             <x-success />
+
+            @if(session()->has('warning'))
+
+            <div class="alert alert-warning">
+                {{session('warning')}}
+            </div>
+
+            @endif
             
 
             <table class="table table-bordered">

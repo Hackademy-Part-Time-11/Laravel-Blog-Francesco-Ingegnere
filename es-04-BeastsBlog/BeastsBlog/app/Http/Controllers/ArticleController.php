@@ -39,6 +39,8 @@ class ArticleController extends Controller
 
         $article->user_id = auth()->user()->id;
 
+        $article->categories()->attach($request->categories);
+
         if($request->hasFile('image') && $request->file('image')->isValid()){
             // $fileName = 'cover.jpg'; //nome imposto
             // $fileName = uniqid('article_image_').'.'.$request->file('image')->extension(); //nome con id random
@@ -68,6 +70,10 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
+        if($article->user_id != auth()->user()->id) {
+            abort(403);
+        }
+
         return view('account.articles.edit', compact('article'));
     }
 
@@ -76,8 +82,16 @@ class ArticleController extends Controller
      */
     public function update(StoreArticleRequest $request, Article $article)
     {
+        if($article->user_id != auth()->user()->id) {
+            abort(403);
+        }
+
         $article->update($request->all());
-        return redirect()->back()->with(['success' => 'Articolo modificato con successo!']);
+
+        $article->categories()->detach();
+        $article->categories()->attach($request->categories);
+
+        return redirect()->route('articles.index')->with(['success' => 'Articolo modificato con successo!']);
     }
 
     /**
@@ -85,6 +99,12 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
+        if($article->user_id != auth()->user()->id) {
+            abort(403);
+        }
+        
+        $article->categories()->detach();
+
         $article->delete();
         return redirect()->back()->with(['success' => 'Articolo cancellato con successo!']);
     }

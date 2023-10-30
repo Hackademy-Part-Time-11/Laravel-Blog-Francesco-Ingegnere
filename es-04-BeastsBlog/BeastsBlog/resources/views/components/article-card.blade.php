@@ -1,6 +1,10 @@
 <div class="card text-center shadow mx-3">
     <div class="card-header bg-black text-white">
-        {{$category}}
+        @foreach($categories as $category)
+
+        {{$category->name}}
+
+        @endforeach
     </div>
     @if ($image)  
         <img class="card-img-top" src="{{$image}}" alt="Card image cap">

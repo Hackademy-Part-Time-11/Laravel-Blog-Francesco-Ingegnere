@@ -5,7 +5,11 @@
     
             <div class="card text-center shadow">
                 <div class="card-header bg-black text-white">
-                    {{$articles->category->name}}
+                    @foreach($article->categories as $category)
+
+                    {{$category->name}}
+
+                    @endforeach
                 </div>
                 <div class="card-body">
                     <h2 class="card-title">{{$articles->title}}</h2>

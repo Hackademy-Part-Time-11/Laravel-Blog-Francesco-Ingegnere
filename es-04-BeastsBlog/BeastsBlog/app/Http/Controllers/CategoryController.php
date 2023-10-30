@@ -64,6 +64,12 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
+        if($category->articles->count()) {
+            return redirect()->back()->with(['warning' => 'Impossibile cancellare la categoria perchè ci sono articoli collegati']);
+        }
+
+        /* $category->articles()->detach(); */
+
         $category->delete();
         return redirect()->back()->with(['success' => 'Categoria cancellata con successo!']);
     }

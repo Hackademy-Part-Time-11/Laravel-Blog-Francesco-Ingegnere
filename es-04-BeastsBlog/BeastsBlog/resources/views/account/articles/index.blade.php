@@ -24,7 +24,13 @@
                     <tr>
                         <td>{{$article->id}}</td>
                         <td>{{$article->title}}</td>
-                        <td>{{$article->category->name}}</td>
+                        <td>
+                            @foreach($article->categories as $category)
+
+                            {{$category->name}} <br>
+
+                            @endforeach
+                        </td>
                         <td class="text-end d-flex justify-content-end">
                             <a href="{{route('articles.edit', $article)}}"><button class="btn btn-black">Modifica</button></a>
                             <a href="">
