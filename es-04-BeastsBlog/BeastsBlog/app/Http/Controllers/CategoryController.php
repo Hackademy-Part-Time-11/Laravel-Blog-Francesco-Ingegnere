@@ -21,7 +21,12 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('account.categories.create');
+        return view('account.categories.form', [
+            'action' => route('categories.store'),
+            'title' => 'Crea una nuova categoria',
+            'button' => 'Inserisci',
+            'category' => new Category(),
+        ]);
     }
 
     /**
@@ -47,7 +52,12 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('account.categories.edit', compact('category'));
+        return view('account.categories.form', [
+            'action' => route('categories.update', $category),
+            'title' => 'Modifica categoria',
+            'button' => 'Modifica',
+            'category' => $category,
+        ]);
     }
 
     /**

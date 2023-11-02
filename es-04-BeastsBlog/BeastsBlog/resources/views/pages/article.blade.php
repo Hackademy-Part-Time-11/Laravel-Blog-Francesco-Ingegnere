@@ -5,10 +5,8 @@
     
             <div class="card text-center shadow">
                 <div class="card-header bg-black text-white">
-                    @foreach($article->categories as $category)
-
-                    {{$category->name}}
-
+                    @foreach($articles->categories as $category)
+                    <span class="text-white border p-1 rounded border-secondary mx-2">{{$category->name}} </span>
                     @endforeach
                 </div>
                 <div class="card-body">

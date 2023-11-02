@@ -39,17 +39,6 @@ Route::get('/anime/view/{id}/{category_id?}', [App\Http\Controllers\AnimeControl
 // Route::get('/insert-data', [App\Http\Controllers\ArticlesController::class, 'insertData']);
 Route::get('/insert-data-anime', [App\Http\Controllers\AnimeController::class, 'categoryAnime']);
 
-Route::prefix('account')->middleware(['auth', 'verified'])->group(function() {
-    /* Route::get('/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'create'])->name('account.articles.create');
-    Route::post('/articoli/crea', [App\Http\Controllers\ArticlesController::class, 'store'])->name('account.articles.store'); */
-
-    Route::resource('articles', App\Http\Controllers\ArticleController::class);
-    Route::resource('categories', \App\Http\Controllers\CategoryController::class)->middleware(['auth.admin']);
-});
-
-
-Route::get('/account', [App\Http\Controllers\AccountController::class, 'index'])->name('account')->middleware(['auth', 'verified']);
-
 Route::prefix('impostazioni')->middleware(['auth', 'verified'])->group(function() {
     Route::get('/', [App\Http\Controllers\AccountController::class, 'settings'])->name('account.settings');
     Route::post('/store', [App\Http\Controllers\AccountController::class, 'settingStore'])->name('account.settings.store');

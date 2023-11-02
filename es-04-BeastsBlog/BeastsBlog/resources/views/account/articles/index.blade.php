@@ -33,14 +33,7 @@
                         </td>
                         <td class="text-end d-flex justify-content-end">
                             <a href="{{route('articles.edit', $article)}}"><button class="btn btn-black">Modifica</button></a>
-                            <a href="">
-                                <form action="{{route('articles.destroy', $article)}}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    
-                                    <button class="btn btn-danger bg-danger mx-2" type="submit">Cancella</button>
-                                </form>
-                            </a>
+                            <button class="btn btn-danger bg-danger mx-2" type="button" data-action="{{route('articles.destroy', $article)}}" data-bs-toggle="modal" data-bs-target="#deleteModal" >Cancella</button>
                         </td>
                     </tr>
                     @endforeach
@@ -48,6 +41,34 @@
             </table>
                 
             {{-- {{$articles->links}} --}}
+
+
+            
+            <!-- Modal -->
+            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="deleteModalLabel">ATTENZIONE</h1>
+                            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Sei sicuro di voler eliminare l'articolo?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-black" data-bs-dismiss="modal">No</button>
+                            <form action="" method="POST" id="delete">
+                                @csrf
+                                @method('DELETE')
+
+                                <button class="btn btn-danger bg-danger mx-2" type="submit">Si</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>  
         

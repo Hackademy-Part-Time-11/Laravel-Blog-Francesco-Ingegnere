@@ -2,7 +2,7 @@
     <div class="card-header bg-black text-white">
         @foreach($categories as $category)
 
-        {{$category->name}}
+        <span class="text-white border p-1 rounded border-secondary">{{$category->name}}</span>
 
         @endforeach
     </div>
