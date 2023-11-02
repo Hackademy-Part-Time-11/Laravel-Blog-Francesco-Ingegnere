@@ -1,10 +1,16 @@
 @import "bootstrap";
 
+
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    
+}
 
+.dropdown-item:active {
+    background-color: #ffb600;
+    color: black;
 }
 
 button, a.btn-black{
