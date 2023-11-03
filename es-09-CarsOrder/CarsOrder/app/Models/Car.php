@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Car extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['brand', 'model', 'price'];
+
+    public function orders() {
+        return $this->hasMany(Order::class);
+    }
 }
