@@ -12,7 +12,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        return view('orders.index');
     }
 
     /**
@@ -20,7 +20,12 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('orders.form', [
+            'action' => route('orders.store'),
+            'title' => 'Crea un nuovo ordine',
+            'button' => 'Ordina',
+            'order' => new Order(),
+        ]);
     }
 
     /**
@@ -28,7 +33,9 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Order::create($request->all());
+   
+        return redirect()->route('orders.index')->with(['success' => 'Ordine creato correttamente']);
     }
 
     /**
@@ -44,7 +51,12 @@ class OrderController extends Controller
      */
     public function edit(Order $order)
     {
-        //
+        return view('orders.form', [
+            'action' => route('orders.update', $order),
+            'title' => 'Modifica ordine',
+            'button' => 'Modifica',
+            'order' => $order,
+        ]);
     }
 
     /**
@@ -52,7 +64,8 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
-        //
+        $order->update($request->all());
+        return redirect()->route('orders.index')->with(['success' => 'Ordine modificato con successo!']);
     }
 
     /**
@@ -60,6 +73,13 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+        if($order->accessories->count()) {
+            return redirect()->back()->with(['warning' => 'Impossibile cancellare l\'ordine perchè ci sono accessori collegati']);
+        }
+
+        /* $order->accessories()->detach(); */
+
+        $order->delete();
+        return redirect()->back()->with(['success' => 'Ordine cancellato con successo!']);
     }
 }

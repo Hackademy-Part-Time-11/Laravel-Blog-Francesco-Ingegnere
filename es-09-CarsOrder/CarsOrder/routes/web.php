@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('orders.index');
 });
+
+Route::resource('orders', App\Http\Controllers\OrderController::class);
+Route::resource('cars', App\Http\Controllers\CarController::class);
+Route::resource('accessories', App\Http\Controllers\AccessoryController::class);
