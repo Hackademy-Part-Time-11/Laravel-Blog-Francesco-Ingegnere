@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Car;
+use App\Models\Accessory;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -12,7 +14,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('orders.index');
+        $orders = Order::all();
+        return view('orders.index', compact('orders'));
     }
 
     /**
@@ -21,10 +24,13 @@ class OrderController extends Controller
     public function create()
     {
         return view('orders.form', [
+            'titleHeader' => 'Aggiungi ordine',
             'action' => route('orders.store'),
             'title' => 'Crea un nuovo ordine',
             'button' => 'Ordina',
             'order' => new Order(),
+            'cars' => Car::all(),
+            'accessories' => Accessory::all(),
         ]);
     }
 
@@ -43,7 +49,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        return view('orders.show', compact('order'));
     }
 
     /**
@@ -52,10 +58,13 @@ class OrderController extends Controller
     public function edit(Order $order)
     {
         return view('orders.form', [
+            'titleHeader' => 'Modifica ordine',
             'action' => route('orders.update', $order),
             'title' => 'Modifica ordine',
-            'button' => 'Modifica',
+            'button' => 'Modifica ordine',
             'order' => $order,
+            'cars' => Car::all(),
+            'accessories' => Accessory::all(),
         ]);
     }
 
