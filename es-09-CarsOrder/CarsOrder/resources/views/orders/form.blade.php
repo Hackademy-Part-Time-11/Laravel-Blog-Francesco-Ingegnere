@@ -49,7 +49,7 @@
                                 <input class="form-check-input" type="checkbox" name="accessories[]"
                                     value="{{ $accessory->id }}">
                                 <label class="form-check-label" for="flexCheckDefault">
-                                    {{ $accessory->name }} <span class="fw-bold">{{ $accessory->price }} €</span>
+                                    {{ $accessory->name }} <span class="fw-bold">{{ euro($accessory->price) }}</span>
                                 </label>
                             </div>
                         @endforeach

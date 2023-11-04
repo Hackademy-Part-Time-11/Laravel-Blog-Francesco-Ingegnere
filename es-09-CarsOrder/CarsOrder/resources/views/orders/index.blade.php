@@ -17,7 +17,7 @@
             <tr>
                 <td>{{ $order->id }}</td>
                 <td><a href="{{ route('orders.show', $order) }}">{{ $order->car->brand }} {{ $order->car->model }}</a></td>
-                <td class="text-end">{{ $order->car->price + $order->accessories->sum('price') }} (compresi accessori)</td>
+                <td class="text-end">{{ euro($order->car->price + $order->accessories->sum('price')) }} (compresi accessori)</td>
             </tr>
             @endforeach
         </tbody>

@@ -39,7 +39,9 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        Order::create($request->all());
+        $order = Order::create($request->all());
+
+        $order->accessories()->attach($request->accessories);
    
         return redirect()->route('orders.index')->with(['success' => 'Ordine creato correttamente']);
     }
@@ -74,6 +76,10 @@ class OrderController extends Controller
     public function update(Request $request, Order $order)
     {
         $order->update($request->all());
+
+        $order->accessories()->detach();
+        $order->accessories()->attach($request->accessories);
+
         return redirect()->route('orders.index')->with(['success' => 'Ordine modificato con successo!']);
     }
 

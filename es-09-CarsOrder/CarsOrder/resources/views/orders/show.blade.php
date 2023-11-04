@@ -12,21 +12,21 @@
     </section>
 
     <section class="mt-5">
-        Prezzo: {{ $order->car->price }}
+        Prezzo: {{ euro($order->car->price) }}
     </section>
 
     <section class="mt-5">
-        <h3>Accessori ({{ $order->accessories->sum('price') }})</h3>
+        <h3>Accessori ({{ euro($order->accessories->sum('price')) }})</h3>
         
         <ul>
             @foreach($order->accessories as $accessory)
-            <li>{{ $accessory->name }} {{ $accessory->price }}</li>
+            <li>{{ $accessory->name }} {{ euro($accessory->price) }}</li>
             @endforeach
         </ul>
     </section>
 
     <section class="mt-5">
-        Costo totale ordine: <span class="fw-bold">{{ $order->car->price + $order->accessories->sum('price') }}</span>
+        Costo totale ordine: <span class="fw-bold">{{ euro($order->car->price + $order->accessories->sum('price')) }}</span>
     </section>
 
 
