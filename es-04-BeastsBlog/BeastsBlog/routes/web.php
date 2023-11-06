@@ -43,3 +43,10 @@ Route::prefix('impostazioni')->middleware(['auth', 'verified'])->group(function(
     Route::get('/', [App\Http\Controllers\AccountController::class, 'settings'])->name('account.settings');
     Route::post('/store', [App\Http\Controllers\AccountController::class, 'settingStore'])->name('account.settings.store');
 });
+
+Route::get('/counter', App\Livewire\Counter::class);
+
+
+Route::get('/users', function() {
+    return view('users');
+});

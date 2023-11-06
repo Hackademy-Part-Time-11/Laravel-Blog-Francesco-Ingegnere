@@ -47,4 +47,8 @@ class User extends Authenticatable implements MustVerifyEmail
     public function articles() {
         return $this->hasMany(Article::class);
     }
+
+    public static function search($query) {
+        return self::where('name', 'LIKE', "%$query%")->get();
+    }
 }
