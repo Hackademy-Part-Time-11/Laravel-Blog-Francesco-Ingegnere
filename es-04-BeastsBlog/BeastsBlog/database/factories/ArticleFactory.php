@@ -17,7 +17,7 @@ class ArticleFactory extends Factory
      */
     public function definition(): array
     {
-        $indirizzo = 'C:\Users\Francesco\Dropbox\02_FRANCESCO\01_PROGRAMMAZIONE\02_AULAB\07_Laravel\04_esercizi_LARAVEL\es-04-BeastsBlog\BeastsBlog\storage\app/';
+        $addressLocation = base_path('\storage\app/');
 
         return [
             'user_id' => rand(1, 20),
@@ -25,7 +25,7 @@ class ArticleFactory extends Factory
             'description' => fake()->words(rand(6, 15), true),
             'visible' => 1,
             'body' => fake()->text(rand(150, 300)),
-            'image' => str_replace($indirizzo, '', fake()->image(storage_path('app/public/articles') ,640, 480, 'animals', true)),
+            'image' => str_replace($addressLocation, '', fake()->image(storage_path('app/public/articles') ,640, 480, 'animals', true)),
         ];
     }
 }
