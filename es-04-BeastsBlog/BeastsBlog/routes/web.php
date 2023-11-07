@@ -49,4 +49,8 @@ Route::get('/counter', App\Livewire\Counter::class);
 
 Route::get('/users', function() {
     return view('users');
-});
+})->name('search-users');
+
+Route::get('/search-articles', function() {
+    return view('searchArticles');
+})->name('search-articles');

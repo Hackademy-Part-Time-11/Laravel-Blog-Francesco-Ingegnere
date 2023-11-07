@@ -18,4 +18,8 @@ class Article extends Model
     public function categories(){
         return $this->belongsToMany(Category::class);
     }
+
+    public static function search($query) {
+        return self::where('title', 'LIKE', "%$query%")->get();
+    }
 }

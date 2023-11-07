@@ -8,7 +8,7 @@
             <div class="col-6">
                 <ul>
                     @foreach ($users as $user)
-                        <li>{{ $user->name }}</li>
+                        <li class="border rounded list-unstyled ps-2 py-2 my-1">{{ $user->name }}</li>
                     @endforeach
                 </ul>
             </div>
