@@ -30,6 +30,9 @@
                     <div class="col-lg-6 col-12 mb-2">
                         <a href="{{route('search-users')}}"><button class="btn btn-black w-100">Cerca Utenti</button></a>
                     </div>
+                    <div class="col-lg-6 col-12 mb-2">
+                        <a href="{{route('info-users')}}"><button class="btn btn-black w-100">Gestisci Utenti</button></a>
+                    </div>
 
                     @endif
                     
