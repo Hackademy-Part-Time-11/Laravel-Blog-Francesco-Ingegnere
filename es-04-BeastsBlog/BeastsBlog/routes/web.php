@@ -58,3 +58,7 @@ Route::get('/search-articles', function() {
 Route::get('/admin/users', function() {
     return view('admin.users');
 })->name('info-users')->middleware(['auth.admin']);
+
+Route::get('/admin/categories', function() {
+    return view('admin.categories');
+})->name('info-categories')->middleware(['auth.admin']);

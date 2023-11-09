@@ -33,6 +33,9 @@
                     <div class="col-lg-6 col-12 mb-2">
                         <a href="{{route('info-users')}}"><button class="btn btn-black w-100">Gestisci Utenti</button></a>
                     </div>
+                    <div class="col-lg-6 col-12 mb-2">
+                        <a href="{{route('info-categories')}}"><button class="btn btn-black w-100">Gestisci Categorie</button></a>
+                    </div>
 
                     @endif
                     
