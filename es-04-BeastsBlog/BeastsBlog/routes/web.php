@@ -49,16 +49,16 @@ Route::get('/counter', App\Livewire\Counter::class);
 
 Route::get('/users', function() {
     return view('users');
-})->middleware(['auth.admin'])->name('search-users');
+})->middleware(['auth', 'auth.admin'])->name('search-users');
 
 Route::get('/search-articles', function() {
     return view('searchArticles');
-})->middleware(['auth.admin'])->name('search-articles');
+})->middleware(['auth', 'auth.admin'])->name('search-articles');
 
 Route::get('/admin/users', function() {
     return view('admin.users');
-})->name('info-users')->middleware(['auth.admin']);
+})->name('info-users')->middleware(['auth', 'auth.admin']);
 
 Route::get('/admin/categories', function() {
     return view('admin.categories');
-})->name('info-categories')->middleware(['auth.admin']);
+})->name('info-categories')->middleware(['auth', 'auth.admin']);
